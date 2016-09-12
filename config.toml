@@ -25,11 +25,27 @@ googleAnalytics = ""
 
   [params.about]
     str_interests = "Interests"
+    str_education = "Education"
     interests = [
       "Mathematics education",
       "Mathematics",
       "Open educational resources"
     ]
+
+  [[params.about.education]]
+    course = "MSc in Mathematics"
+    institution = "LMU Munich"
+    year = 2016
+
+  [[params.about.education]]
+    course = "BSc in Physics"
+    institution = "LMU Munich"
+    year = 2013
+
+  [[params.about.education]]
+    course = "BSc in Mathematics"
+    institution = "LMU Munich"
+    year = 2012
 
   [[params.social]]
     icon = "envelope"
