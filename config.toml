@@ -13,7 +13,7 @@ googleAnalytics = ""
   organization = "Technical University of Munich"
   avatar = "portrait.png"
   email = "hello@kulla.me"
-  address = ""
+  address = "Heinz Nixdorf-Chair of Mathematics Education, Technical University of Munich"
   phone = ""
 
   date_format = "Mon, Jan 2, 2006"
@@ -46,6 +46,12 @@ googleAnalytics = ""
     course = "BSc in Mathematics"
     institution = "LMU Munich"
     year = 2012
+
+  [params.contact]
+    enable = true
+    title = "Contact"
+    subtitle = ""
+    autolink = true
 
   [[params.social]]
     icon = "envelope"
