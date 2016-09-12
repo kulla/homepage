@@ -62,6 +62,11 @@ googleAnalytics = ""
     icon_pack = "fa"
     link = "//github.com/kulla"
 
+  [[params.social]]
+    icon = "stack-exchange"
+    icon_pack = "fa"
+    link = "https://stackexchange.com/users/1192728/stephan-kulla?tab=accounts"
+
 [[menu.main]]
   name = "Home"
   url = "#top"
