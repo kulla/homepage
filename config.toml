@@ -60,7 +60,7 @@ googleAnalytics = ""
   [[params.social]]
     icon = "github"
     icon_pack = "fa"
-    link = "//github.com/kulla"
+    link = "https://github.com/kulla"
 
   [[params.social]]
     icon = "stack-exchange"
