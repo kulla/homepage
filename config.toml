@@ -53,6 +53,11 @@ googleAnalytics = ""
     link = "mailto:hello@kulla.me"
 
   [[params.social]]
+    icon = "wikipedia-w"
+    icon_pack = "fa"
+    link = "https://de.wikipedia.org/wiki/Benutzer:Stephan_Kulla"
+
+  [[params.social]]
     icon = "github"
     icon_pack = "fa"
     link = "//github.com/kulla"
