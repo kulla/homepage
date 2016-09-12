@@ -1,0 +1,52 @@
+baseurl = "http://kulla.me/"
+title = "Stephan Kulla"
+copyright = "&copy; 2016 Stephan Kulla"
+languageCode = "en"
+theme = "academic"
+
+disqusShortname = ""
+googleAnalytics = ""
+
+[params]
+  name = "Stephan Kulla"
+  role = "Ph.D. student"
+  organization = "Technical University of Munich"
+  avatar = "portrait.jpg"
+  email = "hello@kulla.me"
+  address = ""
+  phone = ""
+
+  date_format = "Mon, Jan 2, 2006"
+  math = false
+  sharing = false
+
+  custom_css = []
+  custom_js  = []
+
+  [params.about]
+    str_interests = "Interests"
+    interests = [
+      "Mathematics education",
+      "Mathematics",
+      "Open educational resources"
+    ]
+
+  [[params.social]]
+    icon = "envelope"
+    icon_pack = "fa"
+    link = "mailto:hello@kulla.me"
+
+  [[params.social]]
+    icon = "github"
+    icon_pack = "fa"
+    link = "//github.com/kulla"
+
+[[menu.main]]
+  name = "Home"
+  url = "#top"
+  weight = 1
+
+[[menu.main]]
+  name = "Contact"
+  url = "#contact"
+  weight = 6
