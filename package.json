@@ -2,6 +2,10 @@
   "name": "resume",
   "type": "module",
   "private": true,
+  "scripts": {
+    "format": "prettier --write .",
+    "lint:format": "prettier --check ."
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "prettier": "^3.7.4"
