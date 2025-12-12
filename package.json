@@ -3,7 +3,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun --hot index.ts",
+    "build": "bun build index.html --outdir dist --target browser --minify",
+    "dev": "bun --hot index.html",
     "format": "prettier --write .",
     "lint:format": "prettier --check ."
   },
