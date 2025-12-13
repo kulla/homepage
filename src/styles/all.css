@@ -11,14 +11,14 @@
   --color-background: #eff1f5;
   --color-text: #4c4f69;
   --color-primary: #40a02b;
-  --spacing: 0.2rem;
+  --spacing: 0.25rem;
 }
 
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--color-background);
   color: var(--color-text);
-  margin: calc(var(--spacing) * 6);
+  margin: calc(var(--spacing) * 4);
 }
 
 h2 {
@@ -30,11 +30,11 @@ h2 {
   display: inline-block;
   font-weight: bold;
   margin-top: 0;
-  margin-bottom: calc(var(--spacing) * 2);
+  margin-bottom: calc(var(--spacing) * 4);
 }
 
 p {
   margin-top: 0;
-  margin-bottom: calc(var(--spacing) * 6);
+  margin-bottom: calc(var(--spacing) * 4);
   line-height: 1.5;
 }
