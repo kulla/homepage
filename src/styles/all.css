@@ -9,6 +9,7 @@
 
 :root {
   --color-background: #eff1f5;
+  --color-overlay: #ccd0da;
   --color-text: #4c4f69;
   --color-primary: #40a02b;
   --spacing: 0.25rem;
@@ -43,4 +44,12 @@ p {
   margin-top: 0;
   margin-bottom: calc(var(--spacing) * 4);
   line-height: 1.5;
+}
+
+.skill-box {
+  background-color: var(--color-overlay);
+  padding: calc(var(--spacing) * 3);
+  border: 2px solid
+    color-mix(in oklab, var(--color-text), var(--color-background) 75%);
+  margin-bottom: calc(var(--spacing) * 4);
 }
