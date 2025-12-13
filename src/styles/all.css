@@ -25,7 +25,16 @@ body {
   font-size: calc(var(--spacing) * 4);
   background-color: var(--color-background);
   color: var(--color-text);
-  margin: 0 calc(var(--spacing) * 6);
+}
+
+main > * {
+  padding: 0 calc(var(--spacing) * 6);
+}
+
+header {
+  background-color: var(--color-overlay);
+  border-bottom: 1px solid
+    color-mix(in oklab, var(--color-text) 5%, var(--color-overlay));
 }
 
 h2 {
