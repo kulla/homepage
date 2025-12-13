@@ -37,6 +37,20 @@ header {
     color-mix(in oklab, var(--color-text) 5%, var(--color-overlay));
 }
 
+hgroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: calc(var(--spacing) * 6);
+}
+
+hgroup img {
+  width: calc(var(--spacing) * 30);
+  height: calc(var(--spacing) * 30);
+  border-radius: 50%;
+  display: block;
+}
+
 h2 {
   padding: calc(var(--spacing) * 3);
   margin-top: calc(var(--spacing) * 6);
