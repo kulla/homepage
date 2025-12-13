@@ -4,17 +4,37 @@
   font-family: 'Inter';
   src: url('../assets/inter.woff2') format('woff2');
   font-style: normal;
-  font-weight: 400;
   font-display: swap;
 }
 
 :root {
   --color-background: #eff1f5;
   --color-text: #4c4f69;
+  --color-primary: #40a02b;
+  --spacing: 0.2rem;
 }
 
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--color-background);
   color: var(--color-text);
+  margin: calc(var(--spacing) * 6);
+}
+
+h2 {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  padding: calc(var(--spacing) * 3);
+  border-radius: calc(var(--spacing) * 3);
+  border-bottom-left-radius: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: calc(var(--spacing) * 2);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: calc(var(--spacing) * 6);
+  line-height: 1.5;
 }
