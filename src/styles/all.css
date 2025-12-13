@@ -53,10 +53,10 @@ hgroup img {
     color-mix(in oklab, var(--color-primary) 20%, var(--color-overlay));
 }
 
-h2 {
-  padding: calc(var(--spacing) * 3);
-  margin-top: calc(var(--spacing) * 6);
-  margin-bottom: calc(var(--spacing) * 3);
+.delete {
+  text-decoration: line-through;
+  color: color-mix(in oklab, var(--color-text) 50%, var(--color-background));
+}
 
   background-image: linear-gradient(
     to right in oklab,
