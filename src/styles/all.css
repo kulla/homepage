@@ -51,6 +51,7 @@ hgroup img {
   display: block;
   border: 4px solid
     color-mix(in oklab, var(--color-primary) 20%, var(--color-overlay));
+  margin-bottom: calc(var(--spacing) * 3);
 }
 
 .delete {
@@ -58,6 +59,8 @@ hgroup img {
   color: color-mix(in oklab, var(--color-text) 50%, var(--color-background));
 }
 
+h2,
+.bubble {
   background-image: linear-gradient(
     to right in oklab,
     var(--color-primary),
@@ -67,6 +70,19 @@ hgroup img {
   border-radius: calc(var(--spacing) * 6);
   border-bottom-left-radius: 0;
   display: inline-block;
+}
+
+.bubble {
+  padding: calc(var(--spacing) * 1) calc(var(--spacing) * 3);
+  font-size: calc(var(--spacing) * 4);
+  margin-bottom: calc(var(--spacing) * 1);
+}
+
+h2 {
+  padding: calc(var(--spacing) * 3);
+
+  margin-top: calc(var(--spacing) * 6);
+  margin-bottom: calc(var(--spacing) * 3);
 
   font-size: calc(var(--spacing) * 4);
   font-weight: 800;
