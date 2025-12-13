@@ -49,6 +49,8 @@ hgroup img {
   height: calc(var(--spacing) * 30);
   border-radius: 50%;
   display: block;
+  border: 4px solid
+    color-mix(in oklab, var(--color-primary) 20%, var(--color-overlay));
 }
 
 h2 {
