@@ -224,6 +224,15 @@ ul.skills li:hover {
   margin-bottom: calc(var(--spacing) * 8);
 }
 
+footer {
+  padding: calc(var(--spacing) * 6);
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-overlay);
+  margin-top: calc(var(--spacing) * 6);
+  color: color-mix(in oklab, var(--color-text) 50%, var(--color-overlay));
+  font-size: calc(var(--spacing) * 3);
+}
+
 @media screen and (max-width: 512px) {
   nav a span {
     display: none;
