@@ -184,23 +184,25 @@ ul.skills li:hover {
   margin-left: calc(var(--spacing) * 3);
 }
 
-.project h3 {
-  position: relative;
-  left: calc(var(--spacing) * -3);
-  color: var(--color-primary);
-  margin-bottom: calc(var(--spacing) * 1);
-}
+.project > hgroup > h3:before {
+  display: inline-block;
+  content: '';
 
-.project h3:before {
   width: calc(var(--spacing) * 3);
   height: calc(var(--spacing) * 3);
-  display: inline-block;
+
   position: relative;
   left: calc(var(--spacing) * -4.75);
+
   border-radius: 50%;
   border: 2px solid var(--color-primary);
   background-color: var(--color-background);
-  content: '';
+}
+
+.project > hgroup > h3 {
+  position: relative;
+  left: calc(var(--spacing) * -3);
+  color: var(--color-primary);
 }
 
 .project hgroup {
