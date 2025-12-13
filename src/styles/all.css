@@ -1,5 +1,10 @@
 @import '../../node_modules/modern-normalize/modern-normalize.css';
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: 'Inter';
   src: url('../assets/inter.woff2') format('woff2');
@@ -24,7 +29,6 @@ body {
 
 h2 {
   padding: calc(var(--spacing) * 3);
-  margin-top: 0;
   margin-bottom: calc(var(--spacing) * 4);
 
   background-image: linear-gradient(
@@ -40,9 +44,12 @@ h2 {
   font-weight: bold;
 }
 
-p {
-  margin-top: 0;
+h3 {
   margin-bottom: calc(var(--spacing) * 4);
+}
+
+p {
+  margin-bottom: calc(var(--spacing) * 3);
   line-height: 1.5;
 }
 
