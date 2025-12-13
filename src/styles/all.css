@@ -56,7 +56,11 @@ hgroup img {
 
 .delete {
   text-decoration: line-through;
-  color: color-mix(in oklab, var(--color-text) 50%, var(--color-background));
+  color: color-mix(in oklab, var(--color-text) 30%, var(--color-overlay));
+}
+
+.bold {
+  font-weight: bold;
 }
 
 h2,
