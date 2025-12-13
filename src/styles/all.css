@@ -91,7 +91,16 @@ nav a {
   border-radius: calc(var(--spacing) * 2);
 }
 
-nav a img {
+nav a:hover {
+  border-color: color-mix(
+    in oklab,
+    var(--color-primary) 40%,
+    var(--color-overlay)
+  );
+  color: var(--color-primary);
+}
+
+nav a svg {
   width: calc(var(--spacing) * 6);
   height: calc(var(--spacing) * 6);
   vertical-align: middle;
