@@ -47,7 +47,7 @@ header {
   border-bottom: 1px solid var(--color-border);
 }
 
-hgroup {
+header hgroup {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,7 +55,7 @@ hgroup {
   margin-bottom: calc(var(--spacing) * 6);
 }
 
-hgroup img {
+header hgroup img {
   width: calc(var(--spacing) * 30);
   height: calc(var(--spacing) * 30);
   border-radius: 50%;
@@ -184,14 +184,14 @@ ul.skills li:hover {
   margin-left: calc(var(--spacing) * 3);
 }
 
-.projects h3 {
+.project h3 {
   position: relative;
   left: calc(var(--spacing) * -3);
   color: var(--color-primary);
-  font-weight: 700;
+  margin-bottom: calc(var(--spacing) * 1);
 }
 
-.projects h3:before {
+.project h3:before {
   width: calc(var(--spacing) * 3);
   height: calc(var(--spacing) * 3);
   display: inline-block;
@@ -201,10 +201,28 @@ ul.skills li:hover {
   border: 2px solid var(--color-primary);
   background-color: var(--color-background);
   content: '';
-  color: var(--color-primary);
 }
 
-.projects p {
+.project hgroup * {
+  font-weight: bold;
+  margin-bottom: calc(var(--spacing) * 1);
+}
+
+.project hgroup p:nth-child(3) {
+  font-weight: 500;
+}
+
+.project hgroup a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.project hgroup {
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
+.project {
   margin-bottom: calc(var(--spacing) * 8);
 }
 
