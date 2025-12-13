@@ -38,8 +38,9 @@ body {
   color: var(--color-text);
 }
 
-main > * {
-  padding: 0 calc(var(--spacing) * 6);
+main > div {
+  max-width: 65ch;
+  margin: 0 auto;
 }
 
 header {
@@ -253,5 +254,9 @@ footer a {
   header > .intro > img {
     margin-right: 0;
     margin-bottom: calc(var(--spacing) * 4);
+  }
+
+  main > div {
+    padding: 0 calc(var(--spacing) * 6);
   }
 }
