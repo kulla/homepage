@@ -62,27 +62,27 @@ p {
   margin-bottom: calc(var(--spacing) * 2);
 }
 
-.skill-box ul {
+ul.skills {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: calc(var(--spacing) * 2);
 }
 
-.skill-box li {
+ul.skills li {
   background-color: var(--color-background);
   padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
+  font-size: 0.9rem;
   font-weight: bold;
   border-radius: 1rem;
-  font-size: 0.9rem;
   box-shadow: 0 2px 4px
     color-mix(in oklab, var(--color-text) 10%, var(--color-overlay));
 }
 
-.skill-box li:hover {
+ul.skills li:hover {
   background-color: var(--color-primary);
   color: var(--color-background);
   cursor: default;
   box-shadow: 0 4px 8px
-    color-mix(in oklab, var(--color-primary) 20%, var(--color-background));
+    color-mix(in oklab, var(--color-primary) 20%, var(--color-overlay));
 }
