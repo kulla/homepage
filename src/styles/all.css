@@ -203,6 +203,10 @@ ul.skills li:hover {
   content: '';
 }
 
+.project hgroup {
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
 .project hgroup * {
   font-weight: bold;
   margin-bottom: calc(var(--spacing) * 1);
@@ -210,16 +214,6 @@ ul.skills li:hover {
 
 .project hgroup p:nth-child(3) {
   font-weight: 500;
-}
-
-.project hgroup a {
-  text-decoration: none;
-  color: var(--color-primary);
-  font-weight: 500;
-}
-
-.project hgroup {
-  margin-bottom: calc(var(--spacing) * 4);
 }
 
 .project {
