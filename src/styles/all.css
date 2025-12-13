@@ -61,3 +61,28 @@ p {
     color-mix(in oklab, var(--color-text) 5%, var(--color-overlay));
   margin-bottom: calc(var(--spacing) * 2);
 }
+
+.skill-box ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--spacing) * 2);
+}
+
+.skill-box li {
+  background-color: var(--color-background);
+  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
+  font-weight: bold;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px
+    color-mix(in oklab, var(--color-text) 10%, var(--color-overlay));
+}
+
+.skill-box li:hover {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  cursor: default;
+  box-shadow: 0 4px 8px
+    color-mix(in oklab, var(--color-primary) 20%, var(--color-background));
+}
