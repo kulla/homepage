@@ -82,12 +82,13 @@ nav {
 nav a {
   text-decoration: none;
   color: var(--color-text);
-  margin: 0 calc(var(--spacing) * 3);
+  margin: 0 calc(var(--spacing) * 1);
   font-weight: 500;
   display: inline-block;
   background-color: var(--color-overlay-dark);
-  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+  padding: calc(var(--spacing) * 2);
   border: 2px solid var(--color-border-dark);
+  border-radius: calc(var(--spacing) * 2);
 }
 
 h2,
