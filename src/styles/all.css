@@ -52,8 +52,8 @@ h2 {
   border-bottom-left-radius: 0;
   display: inline-block;
 
-  font-size: calc(var(--spacing) * 5);
-  font-weight: bold;
+  font-size: calc(var(--spacing) * 4);
+  font-weight: 800;
 }
 
 h3 {
