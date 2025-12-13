@@ -30,7 +30,8 @@ body {
 
 h2 {
   padding: calc(var(--spacing) * 3);
-  margin-bottom: calc(var(--spacing) * 4);
+  margin-top: calc(var(--spacing) * 6);
+  margin-bottom: calc(var(--spacing) * 3);
 
   background-image: linear-gradient(
     to right in oklab,
@@ -38,7 +39,7 @@ h2 {
     color-mix(in oklab, var(--color-primary), var(--color-text) 20%)
   );
   color: var(--color-background);
-  border-radius: calc(var(--spacing) * 3);
+  border-radius: calc(var(--spacing) * 6);
   border-bottom-left-radius: 0;
   display: inline-block;
 
@@ -53,7 +54,7 @@ h3 {
 }
 
 p {
-  margin-bottom: calc(var(--spacing) * 3);
+  margin-bottom: calc(var(--spacing) * 2);
   line-height: 1.5;
 }
 
