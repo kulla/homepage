@@ -16,7 +16,7 @@
   --color-background: #eff1f5;
   --color-overlay: #ccd0da;
   --color-text: #4c4f69;
-  --color-primary: #40a02b;
+  --color-primary: #179299;
   --spacing: 0.25rem;
 }
 
@@ -61,7 +61,7 @@ h2 {
   background-image: linear-gradient(
     to right in oklab,
     var(--color-primary),
-    color-mix(in oklab, var(--color-primary), var(--color-text) 20%)
+    color-mix(in oklab, var(--color-primary), var(--color-background) 20%)
   );
   color: var(--color-background);
   border-radius: calc(var(--spacing) * 6);
