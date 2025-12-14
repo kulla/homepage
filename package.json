@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "build": "bun build src/index.html --outdir dist --target browser --minify",
+    "check:format": "prettier --check .",
     "dev": "bun --hot src/index.html",
-    "format": "prettier --write .",
-    "lint:format": "prettier --check ."
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@types/bun": "latest",
