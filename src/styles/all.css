@@ -109,6 +109,11 @@ nav a svg {
   vertical-align: middle;
 }
 
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
 h2,
 .bubble {
   background-image: linear-gradient(
