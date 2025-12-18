@@ -154,6 +154,33 @@ p {
   line-height: 1.5;
 }
 
+ul.tags {
+  list-style: none;
+  display: flex;
+  gap: calc(var(--spacing) * 2);
+  margin-bottom: calc(var(--spacing) * 6);
+  margin-top: calc(var(--spacing) * 4);
+}
+
+ul.tags li {
+  background-color: var(--color-overlay);
+  color: var(--color-text);
+  padding: calc(var(--spacing) * 1) calc(var(--spacing) * 2);
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px
+    color-mix(in oklab, var(--color-text) 8%, var(--color-overlay));
+}
+
+ul.tags li:hover {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  cursor: default;
+  box-shadow: 0 2px 4px
+    color-mix(in oklab, var(--color-primary) 15%, var(--color-overlay));
+}
+
 .skill-box {
   background-color: var(--color-overlay);
   padding: calc(var(--spacing) * 3);
