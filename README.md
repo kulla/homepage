@@ -1,16 +1,23 @@
-# resume
+# My Homepage
 
-To install dependencies:
+This is my personal homepage at https://kulla.dev. It is handwritten HTML & CSS
+which you can find in the [`src/`](./src) folder.
+
+## Local Development
+
+### Setup
+
+I use [`bun`](https://bun.sh/) for local development. To install dependencies:
 
 ```bash
 bun install
 ```
 
-To run:
+### Start a local server
+
+To run a local server and view the homepage in your browser at
+http://localhost:3000, run:
 
 ```bash
-bun run index.ts
+bun run dev
 ```
-
-This project was created using `bun init` in bun v1.3.3. [Bun](https://bun.com)
-is a fast all-in-one JavaScript runtime.
