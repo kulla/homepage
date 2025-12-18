@@ -168,7 +168,7 @@ ul.tags {
   gap: calc(var(--spacing) * 2);
 }
 
-.projects ul.tags {
+.stations ul.tags {
   margin-bottom: calc(var(--spacing) * 6);
   margin-top: calc(var(--spacing) * 4);
 }
@@ -187,7 +187,7 @@ ul.tags li {
   background-color: var(--color-background);
 }
 
-.projects ul.tags > li {
+.stations ul.tags > li {
   padding: calc(var(--spacing) * 1) calc(var(--spacing) * 2);
   font-size: 0.75rem;
   border-radius: 0.75rem;
@@ -201,13 +201,13 @@ ul.tags li:hover {
     color-mix(in oklab, var(--color-primary) 20%, var(--color-overlay));
 }
 
-.projects {
+.stations {
   border-left: 2px solid var(--color-primary);
   padding-left: calc(var(--spacing) * 6);
   margin-left: calc(var(--spacing) * 3);
 }
 
-.project > hgroup > h3:before {
+.station h3:before {
   display: inline-block;
   content: '';
 
@@ -222,26 +222,27 @@ ul.tags li:hover {
   background-color: var(--color-background);
 }
 
-.project > hgroup > h3 {
+.station h3 {
   position: relative;
   left: calc(var(--spacing) * -3);
   color: var(--color-primary);
 }
 
-.project hgroup {
+.station > hgroup,
+.station > h3 {
   margin-bottom: calc(var(--spacing) * 4);
 }
 
-.project hgroup * {
+.station hgroup * {
   font-weight: bold;
   margin-bottom: calc(var(--spacing) * 1);
 }
 
-.project hgroup p:nth-child(3) {
+.station hgroup p:nth-child(3) {
   font-weight: 500;
 }
 
-.project {
+.station {
   margin-bottom: calc(var(--spacing) * 8);
 }
 
