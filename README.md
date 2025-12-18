@@ -21,3 +21,11 @@ http://localhost:3000, run:
 ```bash
 bun run dev
 ```
+
+## Credits
+
+- Design inspired by [nextjs-resume](https://nextjs-resume.hugw.cloud/#intro) by
+  [Hugo Wantuil](https://www.hugw.dev/).
+- Icons provided by [Font Awesome](https://fontawesome.com/).
+- Typography set in [Inter](https://rsms.me/inter/) by
+  [Rasmus Andersson](https://rsms.me/).
