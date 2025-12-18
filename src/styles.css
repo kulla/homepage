@@ -1,4 +1,4 @@
-@import '../../node_modules/modern-normalize/modern-normalize.css';
+@import '../node_modules/modern-normalize/modern-normalize.css';
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url('../assets/inter.woff2') format('woff2');
+  src: url('assets/inter.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
 }
