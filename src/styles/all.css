@@ -157,6 +157,7 @@ p {
 ul.tags {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: calc(var(--spacing) * 2);
   margin-bottom: calc(var(--spacing) * 6);
   margin-top: calc(var(--spacing) * 4);
