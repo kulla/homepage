@@ -38,7 +38,7 @@ body {
   color: var(--color-text);
 }
 
-main > div {
+main > section {
   max-width: 65ch;
   margin: 0 auto;
 }
