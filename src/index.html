@@ -65,116 +65,33 @@
       name="twitter:description"
       content="Senior software developer and educator focused on creating high-impact, open digital learning tools. I translate complex ideas into robust software and clear educational experiences."
     />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://kulla.dev/#person",
-        "name": "Stephan Kulla",
-        "alternateName": "Kulla",
-        "url": "https://kulla.dev/",
-        "image": "https://kulla.dev/assets/kulla.jpg",
-        "jobTitle": "Senior Software Developer & Mathematics Educator",
-        "description": "Senior software developer and educator focused on creating high-impact, open digital learning tools. I translate complex ideas into robust software and clear educational experiences.",
-        "email": "hello@kulla.me",
-        "sameAs": [
-          "https://github.com/kulla",
-          "https://www.linkedin.com/in/stephan-kulla/"
-        ],
-        "knowsAbout": [
-          "TypeScript",
-          "JavaScript",
-          "Node.js",
-          "Python",
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Docker",
-          "Terraform",
-          "MySQL",
-          "Rust",
-          "Fullstack Development",
-          "Software Architecture",
-          "Technical Leadership",
-          "Mentoring & Coaching",
-          "Mathematics Education"
-        ],
-        "alumniOf": [
-          {
-            "@type": "EducationalOrganization",
-            "name": "Ludwig-Maximilians-Universität München",
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "DE"
-            }
-          },
-          {
-            "@type": "EducationalOrganization",
-            "name": "Technische Universität München",
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "DE"
-            }
-          }
-        ],
-        "hasCredential": [
-          {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "degree",
-            "educationalLevel": "Master's Degree",
-            "name": "Master of Science (Mathematics)"
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "degree",
-            "educationalLevel": "Bachelor's Degree",
-            "name": "Bachelor of Science (Mathematics)"
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "degree",
-            "educationalLevel": "Bachelor's Degree",
-            "name": "Bachelor of Science (Physics)"
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "degree",
-            "educationalLevel": "Master's Degree",
-            "name": "Master of Education (Lehramt Gymnasium) in Mathematics and Physics"
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "degree",
-            "educationalLevel": "Bachelor's Degree",
-            "name": "Bachelor of Education (Lehramt Gymnasium) in Mathematics and Physics"
-          }
-        ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Kulla | Senior Software Developer & Educator",
-        "url": "https://kulla.dev/",
-        "description": "Senior software developer and educator focused on creating high-impact, open digital learning tools. I translate complex ideas into robust software and clear educational experiences.",
-        "author": {
-          "@id": "https://kulla.dev/#person"
-        },
-        "inLanguage": "en"
-      }
-    </script>
+    <meta itemprop="name" content="Stephan Kulla" />
+    <meta itemprop="alternateName" content="Kulla" />
+    <meta
+      itemprop="description"
+      content="Senior software developer and educator focused on creating high-impact, open digital learning tools. I translate complex ideas into robust software and clear educational experiences."
+    />
   </head>
-  <body>
+  <body itemscope itemtype="https://schema.org/Person">
+    <link itemprop="url" href="https://kulla.dev/" />
     <main>
       <header>
         <div class="intro">
-          <img src="./assets/kulla.jpg" alt="Picture of Kulla" />
+          <img
+            src="./assets/kulla.jpg"
+            alt="Picture of Kulla"
+            itemprop="image"
+          />
           <hgroup>
             <p class="bubble"><span class="bold">Hello there,</span> I'm</p>
-            <h1><span class="delete">Stephan</span> Kulla</h1>
+            <h1>
+              <span class="delete">Stephan</span>
+              <span itemprop="name">Kulla</span>
+            </h1>
             <p class="bold">
-              Senior Software Developer &amp; Mathematics Educator
+              <span itemprop="jobTitle"
+                >Senior Software Developer &amp; Mathematics Educator</span
+              >
             </p>
           </hgroup>
         </div>
@@ -193,7 +110,11 @@
             </svg>
             <span>Homepage</span>
           </a>
-          <a href="mailto:hello@kulla.me" title="Send me an Email">
+          <a
+            href="mailto:hello@kulla.me"
+            title="Send me an Email"
+            itemprop="email"
+          >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
               <!--
                 Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com
@@ -207,7 +128,11 @@
             </svg>
             <span>hello@kulla.me</span>
           </a>
-          <a href="https://github.com/kulla" title="My GitHub Profile">
+          <a
+            href="https://github.com/kulla"
+            title="My GitHub Profile"
+            itemprop="sameAs"
+          >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
               <!--
                 Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com
@@ -225,6 +150,7 @@
           <a
             href="https://www.linkedin.com/in/stephan-kulla/"
             title="My LinkedIn Profile"
+            itemprop="sameAs"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
               <!--
@@ -284,25 +210,25 @@
         <section class="skill-box">
           <h3>What I do</h3>
           <ul class="tags">
-            <li>Fullstack Development</li>
-            <li>Software Architecture</li>
-            <li>Technical Leadership</li>
-            <li>Mentoring & Coaching</li>
+            <li><span itemprop="knowsAbout">Fullstack Development</span></li>
+            <li><span itemprop="knowsAbout">Software Architecture</span></li>
+            <li><span itemprop="knowsAbout">Technical Leadership</span></li>
+            <li><span itemprop="knowsAbout">Mentoring & Coaching</span></li>
           </ul>
         </section>
         <section class="skill-box">
           <h3>Languages &amp; Frameworks</h3>
           <ul class="tags">
-            <li>TypeScript / JavaScript</li>
-            <li>Node.js</li>
-            <li>Python</li>
-            <li>React</li>
-            <li>Next.js</li>
-            <li>Tailwind CSS</li>
-            <li>Docker</li>
-            <li>Terraform</li>
-            <li>MySQL</li>
-            <li>Rust</li>
+            <li><span itemprop="knowsAbout">TypeScript / JavaScript</span></li>
+            <li><span itemprop="knowsAbout">Node.js</span></li>
+            <li><span itemprop="knowsAbout">Python</span></li>
+            <li><span itemprop="knowsAbout">React</span></li>
+            <li><span itemprop="knowsAbout">Next.js</span></li>
+            <li><span itemprop="knowsAbout">Tailwind CSS</span></li>
+            <li><span itemprop="knowsAbout">Docker</span></li>
+            <li><span itemprop="knowsAbout">Terraform</span></li>
+            <li><span itemprop="knowsAbout">MySQL</span></li>
+            <li><span itemprop="knowsAbout">Rust</span></li>
           </ul>
         </section>
         <h2>Some of my projects</h2>
@@ -420,36 +346,126 @@
           <article class="station">
             <h3>Mathematics</h3>
             <p>
-              <strong>Master of Science (Mathematics)</strong> (2013-2016) at
-              Ludwig-Maximilians-Universität München with grade 1,17
+              <span
+                itemprop="hasCredential"
+                itemscope
+                itemtype="https://schema.org/EducationalOccupationalCredential"
+              >
+                <strong
+                  ><span itemprop="name"
+                    >Master of Science (Mathematics)</span
+                  ></strong
+                >
+                (2013-2016) at
+                <span
+                  itemprop="recognizedBy"
+                  itemscope
+                  itemtype="https://schema.org/EducationalOrganization"
+                >
+                  <span itemprop="name"
+                    >Ludwig-Maximilians-Universität München</span
+                  >
+                </span>
+                with grade 1,17
+              </span>
             </p>
             <p>
-              <strong>Bachelor of Science (Mathematics)</strong> (2008-2012) at
-              Ludwig-Maximilians-Universität München with grade 1,11
+              <span
+                itemprop="hasCredential"
+                itemscope
+                itemtype="https://schema.org/EducationalOccupationalCredential"
+              >
+                <strong
+                  ><span itemprop="name"
+                    >Bachelor of Science (Mathematics)</span
+                  ></strong
+                >
+                (2008-2012) at
+                <span
+                  itemprop="recognizedBy"
+                  itemscope
+                  itemtype="https://schema.org/EducationalOrganization"
+                >
+                  <span itemprop="name"
+                    >Ludwig-Maximilians-Universität München</span
+                  >
+                </span>
+                with grade 1,11
+              </span>
             </p>
           </article>
           <article class="station">
             <h3>Physics</h3>
             <p>
-              <strong>Bachelor of Science (Physics)</strong> (2008-2013) at
-              Ludwig-Maximilians-Universität München with grade 1,90
+              <span
+                itemprop="hasCredential"
+                itemscope
+                itemtype="https://schema.org/EducationalOccupationalCredential"
+              >
+                <strong
+                  ><span itemprop="name"
+                    >Bachelor of Science (Physics)</span
+                  ></strong
+                >
+                (2008-2013) at
+                <span
+                  itemprop="recognizedBy"
+                  itemscope
+                  itemtype="https://schema.org/EducationalOrganization"
+                >
+                  <span itemprop="name"
+                    >Ludwig-Maximilians-Universität München</span
+                  >
+                </span>
+                with grade 1,90
+              </span>
             </p>
           </article>
           <article class="station">
             <h3>Education</h3>
             <p>
-              <strong
-                >Master of Education (Lehramt Gymnasium) in Mathematics and
-                Physics</strong
+              <span
+                itemprop="hasCredential"
+                itemscope
+                itemtype="https://schema.org/EducationalOccupationalCredential"
               >
-              (2017-2019) at Technische Universität München
+                <strong
+                  ><span itemprop="name"
+                    >Master of Education (Lehramt Gymnasium) in Mathematics and
+                    Physics</span
+                  ></strong
+                >
+                (2017-2019) at
+                <span
+                  itemprop="recognizedBy"
+                  itemscope
+                  itemtype="https://schema.org/EducationalOrganization"
+                >
+                  <span itemprop="name">Technische Universität München</span>
+                </span>
+              </span>
             </p>
             <p>
-              <strong
-                >Bachelor of Education (Lehramt Gymnasium) in Mathematics and
-                Physics</strong
+              <span
+                itemprop="hasCredential"
+                itemscope
+                itemtype="https://schema.org/EducationalOccupationalCredential"
               >
-              (2015-2017) at Technische Universität München
+                <strong
+                  ><span itemprop="name"
+                    >Bachelor of Education (Lehramt Gymnasium) in Mathematics
+                    and Physics</span
+                  ></strong
+                >
+                (2015-2017) at
+                <span
+                  itemprop="recognizedBy"
+                  itemscope
+                  itemtype="https://schema.org/EducationalOrganization"
+                >
+                  <span itemprop="name">Technische Universität München</span>
+                </span>
+              </span>
             </p>
           </article>
         </section>
