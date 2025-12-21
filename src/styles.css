@@ -29,11 +29,14 @@
     var(--color-overlay-dark)
   );
   --spacing: 0.25rem;
+  --small-length: calc(var(--spacing) * 2);
+  --normal-length: calc(var(--spacing) * 4);
+  --large-length: calc(var(--spacing) * 8);
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  font-size: calc(var(--spacing) * 4);
+  font-size: var(--normal-length);
   line-height: 1.5;
   background-color: var(--color-background);
   color: var(--color-text);
@@ -48,10 +51,10 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: calc(var(--spacing) * 5);
+  gap: var(--normal-length);
+  padding: var(--large-length) 0;
   background-color: var(--color-overlay);
   border-bottom: 1px solid var(--color-border);
-  padding-top: calc(var(--spacing) * 6);
 }
 
 header > .intro {
@@ -66,7 +69,7 @@ header > .intro > img {
   display: block;
   border: 4px solid
     color-mix(in oklab, var(--color-primary) 25%, var(--color-overlay));
-  margin-right: calc(var(--spacing) * 6);
+  margin-right: var(--normal-length);
 }
 
 .delete {
@@ -79,20 +82,19 @@ header > .intro > img {
 }
 
 nav {
-  margin-bottom: calc(var(--spacing) * 6);
   text-align: center;
 }
 
 nav a {
   text-decoration: none;
   color: var(--color-text);
-  margin: 0 calc(var(--spacing) * 1);
+  margin: 0 var(--spacing);
   font-weight: 500;
   display: inline-block;
   background-color: var(--color-overlay-dark);
-  padding: calc(var(--spacing) * 2);
+  padding: var(--spacing) var(--small-length);
   border: 2px solid var(--color-border-dark);
-  border-radius: calc(var(--spacing) * 2);
+  border-radius: var(--small-length);
 }
 
 nav a:hover {
@@ -123,62 +125,61 @@ h2,
     color-mix(in oklab, var(--color-primary), var(--color-background) 20%)
   );
   color: var(--color-background);
-  border-radius: calc(var(--spacing) * 6);
+  border-radius: 2em;
   border-bottom-left-radius: 0;
   display: inline-block;
 }
 
 .bubble {
-  padding: calc(var(--spacing) * 1) calc(var(--spacing) * 3);
-  font-size: calc(var(--spacing) * 4);
-  margin-bottom: calc(var(--spacing) * 1);
+  padding: var(--spacing) var(--small-length);
+  font-size: var(--normal-length);
+  margin-bottom: var(--spacing);
 }
 
 h2 {
-  padding: calc(var(--spacing) * 3);
+  padding: var(--small-length) var(--normal-length);
 
-  margin-top: calc(var(--spacing) * 6);
-  margin-bottom: calc(var(--spacing) * 3);
+  margin-top: var(--large-length);
+  margin-bottom: var(--small-length);
 
-  font-size: calc(var(--spacing) * 4);
+  font-size: var(--normal-length);
   font-weight: 800;
 }
 
 h3 {
-  margin-bottom: calc(var(--spacing) * 4);
-  font-size: calc(var(--spacing) * 4);
+  margin-bottom: var(--small-length);
+  font-size: var(--normal-length);
   font-weight: 500;
 }
 
 p {
-  margin-bottom: calc(var(--spacing) * 2);
+  margin-bottom: var(--small-length);
 }
 
 .skill-box {
   background-color: var(--color-overlay);
-  padding: calc(var(--spacing) * 3);
   border: 2px solid var(--color-border);
-  margin-bottom: calc(var(--spacing) * 2);
+  padding: var(--normal-length);
+  margin-bottom: var(--small-length);
 }
 
 ul.tags {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: calc(var(--spacing) * 2);
+  gap: var(--small-length);
 }
 
 .stations ul.tags {
-  margin-bottom: calc(var(--spacing) * 6);
-  margin-top: calc(var(--spacing) * 4);
+  margin-top: var(--normal-length);
 }
 
 ul.tags li {
   background-color: var(--color-overlay);
-  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
+  padding: var(--small-length) var(--normal-length);
   font-weight: bold;
   font-size: 0.9rem;
-  border-radius: 1rem;
+  border-radius: 2em;
   box-shadow: 0 2px 4px
     color-mix(in oklab, var(--color-text) 10%, var(--color-overlay));
 }
@@ -188,7 +189,7 @@ ul.tags li {
 }
 
 .stations ul.tags > li {
-  padding: calc(var(--spacing) * 1) calc(var(--spacing) * 2);
+  padding: var(--spacing) var(--small-length);
   font-size: 0.75rem;
   border-radius: 0.75rem;
 }
@@ -230,12 +231,12 @@ ul.tags li:hover {
 
 .station > hgroup,
 .station > h3 {
-  margin-bottom: calc(var(--spacing) * 4);
+  margin-bottom: var(--normal-length);
 }
 
 .station hgroup * {
   font-weight: bold;
-  margin-bottom: calc(var(--spacing) * 1);
+  margin-bottom: var(--spacing);
 }
 
 .station hgroup p:nth-child(3) {
@@ -243,17 +244,22 @@ ul.tags li:hover {
 }
 
 .station {
-  margin-bottom: calc(var(--spacing) * 8);
+  margin-bottom: var(--large-length);
 }
 
 footer {
   text-align: center;
-  padding: calc(var(--spacing) * 6);
+  padding: var(--large-length);
   border-top: 1px solid var(--color-border);
   background-color: var(--color-overlay);
-  margin-top: calc(var(--spacing) * 6);
+  margin-top: var(--large-length);
   color: color-mix(in oklab, var(--color-text) 50%, var(--color-overlay));
-  font-size: calc(var(--spacing) * 3);
+  font-size: smaller;
+}
+
+footer p {
+  max-width: 65ch;
+  margin: 0 auto;
 }
 
 footer a {
@@ -274,10 +280,10 @@ footer a {
 
   header > .intro > img {
     margin-right: 0;
-    margin-bottom: calc(var(--spacing) * 4);
+    margin-bottom: var(--normal-length);
   }
 
   main > div {
-    padding: 0 calc(var(--spacing) * 6);
+    padding: 0 var(--large-length);
   }
 }
