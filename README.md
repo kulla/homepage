@@ -19,7 +19,7 @@ To run a local server and view the homepage in your browser at
 http://localhost:3000, run:
 
 ```bash
-bun run dev
+bun dev
 ```
 
 ## Credits
