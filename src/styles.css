@@ -73,11 +73,6 @@ header > .intro > img {
   margin-right: var(--normal-length);
 }
 
-.delete {
-  text-decoration: line-through;
-  color: color-mix(in oklab, var(--color-text) 30%, var(--color-overlay));
-}
-
 .bold {
   font-weight: bold;
 }
@@ -254,6 +249,13 @@ footer a {
   }
 }
 
+@media screen {
+  .delete {
+    text-decoration: line-through;
+    color: color-mix(in oklab, var(--color-text) 30%, var(--color-overlay));
+  }
+}
+
 @media print {
   :root {
     --large-length: calc(var(--spacing) * 4);
@@ -266,5 +268,14 @@ footer a {
 
   footer {
     display: none;
+  }
+
+  header .bubble {
+    display: none;
+  }
+
+  header > .intro > img {
+    width: calc(var(--spacing) * 20);
+    height: calc(var(--spacing) * 20);
   }
 }
