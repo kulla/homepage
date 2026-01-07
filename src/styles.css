@@ -231,7 +231,7 @@ ul.tags li:hover {
 .station > hgroup,
 .station > h3 {
   font-weight: bold;
-  margin-bottom: var(--normal-length);
+  margin-bottom: var(--small-length);
 }
 
 .station hgroup * {
