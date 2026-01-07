@@ -52,7 +52,7 @@ header {
   flex-direction: column;
   align-items: center;
   gap: var(--normal-length);
-  padding: var(--large-length) 0;
+  padding: var(--normal-length) 0;
   background-color: var(--color-overlay);
   border-bottom: 1px solid var(--color-border);
 }
