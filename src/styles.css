@@ -158,18 +158,14 @@ p {
 }
 
 .skills {
-  margin-bottom: var(--normal-length);
-}
-
-.skills * {
-  display: inline;
-}
-
-ul.tags {
-  list-style: none;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--small-length) var(--normal-length);
+  align-items: start;
 }
 
 ul.tags li {
+  list-style: none;
   font-size: 0.7rem;
   display: inline-block;
   margin: 0.2em;
