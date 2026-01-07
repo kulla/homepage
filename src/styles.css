@@ -278,8 +278,8 @@ footer a {
     margin-bottom: var(--normal-length);
   }
 
-  main > div {
-    padding: 0 var(--large-length);
+  main > section {
+    margin: 0 var(--normal-length);
   }
 }
 
