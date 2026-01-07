@@ -29,3 +29,4 @@ bun dev
 - Icons provided by [Font Awesome](https://fontawesome.com/).
 - Typography set in [Inter](https://rsms.me/inter/) by
   [Rasmus Andersson](https://rsms.me/).
+- Color theme: [rose pine](https://rosepinetheme.com/).

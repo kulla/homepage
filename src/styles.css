@@ -13,10 +13,10 @@
 }
 
 :root {
-  --color-background: #eff1f5;
-  --color-overlay: #dce0e8;
-  --color-text: #4c4f69;
-  --color-primary: #179299;
+  --color-background: #fffaf3;
+  --color-overlay: #faf4ed;
+  --color-text: #575279;
+  --color-primary: #56949f;
   --color-border: color-mix(
     in oklab,
     var(--color-text) 10%,
@@ -104,7 +104,7 @@ h2,
   background-image: linear-gradient(
     to right in oklab,
     var(--color-primary),
-    color-mix(in oklab, var(--color-primary), var(--color-background) 20%)
+    color-mix(in oklab, var(--color-primary), var(--color-background) 25%)
   );
   color: var(--color-background);
   border-radius: 2em;
