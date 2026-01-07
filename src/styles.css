@@ -239,10 +239,6 @@ ul.tags li:hover {
   margin-bottom: var(--spacing);
 }
 
-.station hgroup p:nth-child(3) {
-  font-weight: 500;
-}
-
 .station {
   margin-bottom: var(--large-length);
 }
