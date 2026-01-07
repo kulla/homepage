@@ -154,7 +154,7 @@ p {
 
 ul.tags li {
   list-style: none;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   display: inline-block;
   margin: 0.2em;
   padding: 0.1em 0.4em;
@@ -162,6 +162,10 @@ ul.tags li {
   border: 1px solid var(--color-border);
   border-radius: 0.5em;
   font-weight: 600;
+}
+
+.station ul.tags li {
+  font-size: 0.7rem;
 }
 
 .stations {
