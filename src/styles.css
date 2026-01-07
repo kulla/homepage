@@ -149,7 +149,6 @@ h2 {
 h3 {
   margin-bottom: var(--small-length);
   font-size: var(--normal-length);
-  font-weight: 500;
 }
 
 p {
@@ -231,11 +230,11 @@ ul.tags li:hover {
 
 .station > hgroup,
 .station > h3 {
+  font-weight: bold;
   margin-bottom: var(--normal-length);
 }
 
 .station hgroup * {
-  font-weight: bold;
   margin-bottom: var(--spacing);
 }
 
