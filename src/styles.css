@@ -149,56 +149,35 @@ h2 {
 h3 {
   margin-bottom: var(--small-length);
   font-size: var(--normal-length);
+  font-weight: bold;
+  color: var(--color-primary);
 }
 
 p {
   margin-bottom: var(--small-length);
 }
 
-.skill-box {
-  background-color: var(--color-overlay);
-  border: 2px solid var(--color-border);
-  padding: var(--normal-length);
-  margin-bottom: var(--small-length);
+.skills {
+  margin-bottom: var(--normal-length);
+}
+
+.skills * {
+  display: inline;
 }
 
 ul.tags {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--small-length);
-}
-
-.stations ul.tags {
-  margin-top: var(--normal-length);
 }
 
 ul.tags li {
+  font-size: 0.7rem;
+  display: inline-block;
+  margin: 0.2em;
+  padding: 0.1em 0.4em;
   background-color: var(--color-overlay);
-  padding: var(--small-length) var(--normal-length);
-  font-weight: bold;
-  font-size: 0.9rem;
-  border-radius: 2em;
-  box-shadow: 0 2px 4px
-    color-mix(in oklab, var(--color-text) 10%, var(--color-overlay));
-}
-
-.skill-box ul.tags li {
-  background-color: var(--color-background);
-}
-
-.stations ul.tags > li {
-  padding: var(--spacing) var(--small-length);
-  font-size: 0.75rem;
-  border-radius: 0.75rem;
-}
-
-ul.tags li:hover {
-  background-color: var(--color-primary);
-  color: var(--color-background);
-  cursor: default;
-  box-shadow: 0 4px 8px
-    color-mix(in oklab, var(--color-primary) 20%, var(--color-overlay));
+  border: 1px solid var(--color-border);
+  border-radius: 0.5em;
+  font-weight: 600;
 }
 
 .stations {
@@ -225,11 +204,9 @@ ul.tags li:hover {
 .station h3 {
   position: relative;
   left: calc(var(--spacing) * -3);
-  color: var(--color-primary);
 }
 
-.station > hgroup,
-.station > h3 {
+.station > hgroup {
   font-weight: bold;
   margin-bottom: var(--small-length);
 }
