@@ -110,22 +110,14 @@ h2,
   border-radius: 2em;
   border-bottom-left-radius: 0;
   display: inline-block;
-}
 
-.bubble {
-  padding: var(--spacing) var(--small-length);
+  padding: var(--spacing) var(--normal-length);
   font-size: var(--normal-length);
   margin-bottom: var(--spacing);
 }
 
 h2 {
-  padding: var(--small-length) var(--normal-length);
-
   margin-top: var(--large-length);
-  margin-bottom: var(--small-length);
-
-  font-size: var(--normal-length);
-  font-weight: 800;
 }
 
 h3 {
