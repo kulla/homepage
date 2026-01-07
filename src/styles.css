@@ -272,4 +272,13 @@ footer a {
   article {
     page-break-inside: avoid;
   }
+
+  @page {
+    background-color: var(--color-background);
+    margin: 10mm 0;
+  }
+
+  @page:first {
+    margin-top: 0;
+  }
 }
