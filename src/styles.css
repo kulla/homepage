@@ -15,18 +15,12 @@
 :root {
   --color-background: #eff1f5;
   --color-overlay: #dce0e8;
-  --color-overlay-dark: #ccd0da;
   --color-text: #4c4f69;
   --color-primary: #179299;
   --color-border: color-mix(
     in oklab,
     var(--color-text) 10%,
     var(--color-overlay)
-  );
-  --color-border-dark: color-mix(
-    in oklab,
-    var(--color-text) 10%,
-    var(--color-overlay-dark)
   );
   --spacing: 0.25rem;
   --smaller-length: calc(var(--spacing) * 0.5);
