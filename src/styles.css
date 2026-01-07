@@ -255,6 +255,10 @@ footer a {
 }
 
 @media print {
+  :root {
+    --large-length: calc(var(--spacing) * 4);
+  }
+
   footer {
     display: none;
   }
