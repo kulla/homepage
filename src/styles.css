@@ -278,4 +278,8 @@ footer a {
     width: calc(var(--spacing) * 20);
     height: calc(var(--spacing) * 20);
   }
+
+  article {
+    page-break-inside: avoid;
+  }
 }
