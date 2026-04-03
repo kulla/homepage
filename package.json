@@ -9,6 +9,7 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
+    "@tsconfig/bun": "1.0.10",
     "@types/bun": "latest",
     "prettier": "3.8.1",
     "typescript": "6.0.2"
