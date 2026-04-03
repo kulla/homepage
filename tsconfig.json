@@ -1,6 +1,5 @@
 {
   "extends": "@tsconfig/bun/tsconfig.json",
-  "includes": ["src"],
   "compilerOptions": {
     "types": ["bun"]
   }
