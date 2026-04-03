@@ -28,4 +28,4 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-bun
-      - run: bun check:format
+      - run: bun run check:format
