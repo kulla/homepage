@@ -5,17 +5,17 @@
   "scripts": {
     "build": "bun build src/index.html --outdir dist --target browser --minify",
     "check:format": "prettier --check .",
+    "check:tsc": "tsc --noEmit",
     "dev": "bun --hot src/index.html",
     "format": "prettier --write ."
   },
   "devDependencies": {
+    "@tsconfig/bun": "1.0.10",
     "@types/bun": "latest",
-    "prettier": "^3.8.1"
-  },
-  "peerDependencies": {
-    "typescript": "^5.9.3"
+    "prettier": "3.8.1",
+    "typescript": "6.0.2"
   },
   "dependencies": {
-    "modern-normalize": "^3.0.1"
+    "modern-normalize": "3.0.1"
   }
 }
