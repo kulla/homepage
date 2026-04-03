@@ -5,6 +5,7 @@
   "scripts": {
     "build": "bun build src/index.html --outdir dist --target browser --minify",
     "check:format": "prettier --check .",
+    "check:tsc": "tsc --noEmit",
     "dev": "bun --hot src/index.html",
     "format": "prettier --write ."
   },
