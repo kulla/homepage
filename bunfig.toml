@@ -2,4 +2,5 @@ telemetry = false
 
 [install]
 auto = "disable"
+exact = true
 minimumReleaseAge = 259200

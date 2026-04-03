@@ -10,10 +10,10 @@
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "prettier": "^3.8.1",
-    "typescript": "^6.0.2"
+    "prettier": "3.8.1",
+    "typescript": "6.0.2"
   },
   "dependencies": {
-    "modern-normalize": "^3.0.1"
+    "modern-normalize": "3.0.1"
   }
 }
