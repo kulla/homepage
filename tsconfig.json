@@ -1,4 +1,5 @@
 {
+  "$schema": "https://www.schemastore.org/tsconfig",
   "extends": "@tsconfig/bun/tsconfig.json",
   "compilerOptions": {
     "types": ["bun"]
