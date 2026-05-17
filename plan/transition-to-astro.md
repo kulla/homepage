@@ -22,6 +22,7 @@ commit stays easy to review and the new codebase remains approachable.
 - The initial visual direction should start from the template look.
 - `Publications` and `Presentations` should be ommited.
 - The CV should live on a dedicated route.
+- `/` should redirect to `/en/`.
 - Deployment should target a custom root domain `https://kulla.dev/`.
 - Commit messages should use conventional commits.
 - The current handwritten site should later be moved to a separate reference
@@ -68,6 +69,7 @@ commit stays easy to review and the new codebase remains approachable.
 - [ ] Replace template-wide site configuration with project-specific data in
       `src/constants.ts` and shared assets.
 - [ ] Introduce the English localized route structure under `src/pages/en/`.
+- [ ] Add the root route so `/` redirects to `/en/`.
 - [ ] Migrate the landing page route by adapting:
       `astro-scholar-main/src/pages/index.astro`,
       `astro-scholar-main/src/components/Hero.astro`, and
@@ -92,16 +94,12 @@ commit stays easy to review and the new codebase remains approachable.
       `https://kulla.dev/`.
 - [ ] Remove unused template artifacts and verify the build and checks.
 
-## Open Questions
-
-- Whether `/` should later redirect to `/en/` or whether only localized routes
-  should exist.
-
 ## Current Status
 
 - [x] Main plan created.
 - [x] Commit workflow scaffolding implemented in `scripts/commit.sh`.
 - [x] Transition strategy updated to a route-by-route and file-by-file
       migration.
+- [x] Root route decision made: `/` should redirect to `/en/`.
 - [ ] Architecture and i18n project-structure step not started yet.
 - [ ] Astro migration code not implemented yet.
