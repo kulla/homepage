@@ -1,3 +1,6 @@
+# Workflow files
+plan/current_commit_message
+
 # dependencies (bun install)
 node_modules
 
