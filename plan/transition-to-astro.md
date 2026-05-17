@@ -29,6 +29,12 @@ commit stays easy to review and the new codebase remains approachable.
   reset, typography, and app-wide layout primitives.
 - A component or page subdirectory should be introduced only when a single
   `.astro` file becomes too large or needs companion assets.
+- Blog posts should move to an Astro content collection so each post can live in
+  its own folder with colocated assets, for example
+  `src/content/blog/my-post/index.md` plus sibling images referenced with
+  relative paths such as `./cover.jpg`.
+- Blog post frontmatter images such as covers should be validated through the
+  content collection schema with Astro's `image()` helper.
 - Deployment should target a custom root domain `https://kulla.dev/`.
 - Commit messages should use conventional commits.
 - The current handwritten site should later be moved to a separate reference
@@ -128,8 +134,12 @@ commit stays easy to review and the new codebase remains approachable.
       `src/layouts/BlogPost.astro`.
 - [ ] Investigate `src/layouts/BlogPost.astro` manually and with help from a
       coding agent.
+- [ ] Introduce the blog content collection structure under `src/content/blog/`
+      so each post can use a dedicated folder with colocated images and other
+      companion assets.
 - [ ] Replace the template sample blog posts with real blog content one file at
-      a time.
+      a time, keeping each post's images next to the post entry instead of in a
+      shared global image folder.
 - [ ] Remove template-only routes and data that are outside the target site:
       `src/pages/publications.astro`, `src/pages/presentations.astro`,
       `src/data/publications.json`, and presentation-specific public assets.
