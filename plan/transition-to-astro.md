@@ -55,18 +55,19 @@ commit stays easy to review and the new codebase remains approachable.
 
 ## Ordered Todo List
 
-1. Create the commit workflow scaffolding.
-2. Record architecture and i18n decisions in the project structure.
-3. Adopt the Astro template into the main project with minimal setup.
-4. Configure the site for localized `/<lang>/...` routes.
-5. Remove template sections that are not part of the target site.
-6. Move the legacy handwritten site into a separate reference location.
-7. Build the English landing page shell at `/en/`.
-8. Build the English CV page shell at `/en/cv/`.
-9. Adapt the blog to the new structure at `/en/blog/`.
-10. Migrate content progressively from the legacy site.
-11. Migrate metadata, assets, and deployment settings.
-12. Clean up unused files and verify the build.
+- [x] Create the commit workflow scaffolding.
+- [ ] Record architecture and i18n decisions in the project structure.
+- [ ] Import the Astro template into the main project with minimal structural changes.
+- [ ] Wire the root project to build and run the Astro site.
+- [ ] Introduce the localized `/<lang>/...` route structure with English-only active routes.
+- [ ] Remove template pages and navigation items that are not part of the target site.
+- [ ] Move the legacy handwritten site into a separate reference location.
+- [ ] Build the English landing page shell at `/en/`.
+- [ ] Build the English CV page shell at `/en/cv/`.
+- [ ] Adapt the blog to the localized structure at `/en/blog/`.
+- [ ] Migrate content progressively from the legacy site into the new pages.
+- [ ] Migrate metadata, assets, and deployment settings for `https://kulla.dev/`.
+- [ ] Remove unused files and verify the build and checks.
 
 ## Open Questions
 
@@ -75,6 +76,7 @@ commit stays easy to review and the new codebase remains approachable.
 
 ## Current Status
 
-- Main plan created.
-- Commit workflow scaffolding implemented in `scripts/commit.sh`.
-- No Astro migration code implemented yet.
+- [x] Main plan created.
+- [x] Commit workflow scaffolding implemented in `scripts/commit.sh`.
+- [ ] Architecture and i18n project-structure step not started yet.
+- [ ] Astro migration code not implemented yet.
