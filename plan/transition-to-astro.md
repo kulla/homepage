@@ -23,6 +23,13 @@ commit stays easy to review and the new codebase remains approachable.
 - `Publications` and `Presentations` should be ommited.
 - The CV should live on a dedicated route.
 - `/` should redirect to `/en/`.
+- Component-specific CSS and JS should be colocated with the component or page.
+- Prefer keeping markup, scoped CSS, and processed client-side scripts in the
+  same `.astro` file.
+- `src/styles/global.css` should be reserved for global styles such as tokens,
+  reset, typography, and app-wide layout primitives.
+- A component or page subdirectory should be introduced only when a single
+  `.astro` file becomes too large or needs companion assets.
 - Deployment should target a custom root domain `https://kulla.dev/`.
 - Commit messages should use conventional commits.
 - The current handwritten site should later be moved to a separate reference
@@ -61,11 +68,22 @@ commit stays easy to review and the new codebase remains approachable.
       files.
 - [ ] Align the root project tooling with Astro by introducing the required root
       config and scripts.
-- [ ] Migrate the shared shell files from the template:
-      `src/layouts/Layout.astro`, `src/components/Header.astro`,
-      `src/components/Navigation.astro`, `src/components/Menu.astro`,
-      `src/components/ThemeToggle.astro`, `src/components/Footer.astro`,
-      `src/scripts/menu.js`, and `src/styles/global.css`.
+- [ ] Decide for each migrated file whether it stays as a single `.astro` file
+      or moves into a colocated component or page subdirectory.
+- [ ] Migrate the shared shell files from the template by merging:
+      `astro-scholar-main/src/layouts/Layout.astro` into
+      `src/layouts/Layout.astro`,
+      `astro-scholar-main/src/components/Header.astro` into
+      `src/components/Header.astro`,
+      `astro-scholar-main/src/components/Navigation.astro` into
+      `src/components/Navigation.astro`,
+      `astro-scholar-main/src/components/Menu.astro` into
+      `src/components/Menu.astro`,
+      `astro-scholar-main/src/components/ThemeToggle.astro` into
+      `src/components/ThemeToggle.astro`,
+      `astro-scholar-main/src/components/Footer.astro` into
+      `src/components/Footer.astro`, and
+      `astro-scholar-main/src/styles/global.css` into `src/styles/global.css`.
 - [ ] Investigate `src/layouts/Layout.astro` manually and with help from a
       coding agent.
 - [ ] Investigate `src/components/Header.astro` manually and with help from a
@@ -74,44 +92,46 @@ commit stays easy to review and the new codebase remains approachable.
       a coding agent.
 - [ ] Investigate `src/components/Menu.astro` manually and with help from a
       coding agent.
-- [ ] Investigate `src/components/ThemeToggle.astro` manually and with help
-      from a coding agent.
+- [ ] Investigate `src/components/ThemeToggle.astro` manually and with help from
+      a coding agent.
 - [ ] Investigate `src/components/Footer.astro` manually and with help from a
       coding agent.
-- [ ] Investigate `src/scripts/menu.js` manually and with help from a coding
-      agent.
 - [ ] Investigate `src/styles/global.css` manually and with help from a coding
       agent.
+- [ ] Integrate `astro-scholar-main/src/scripts/menu.js` into the owning Astro
+      component files, primarily `src/components/Menu.astro` and
+      `src/components/Navigation.astro`, instead of keeping a separate
+      `src/scripts/menu.js` file.
 - [ ] Replace template-wide site configuration with project-specific data in
       `src/constants.ts` and shared assets.
 - [ ] Introduce the English localized route structure under `src/pages/en/`.
 - [ ] Add the root route so `/` redirects to `/en/`.
-- [ ] Migrate the landing page route by adapting:
-      `astro-scholar-main/src/pages/index.astro`,
-      `astro-scholar-main/src/components/Hero.astro`, and
-      `astro-scholar-main/src/styles/home.css` into `/en/`.
+- [ ] Migrate the landing page route by merging
+      `astro-scholar-main/src/pages/index.astro` into `src/pages/en/index.astro`
+      and `astro-scholar-main/src/components/Hero.astro` into
+      `src/components/Hero.astro`, while merging landing-page CSS from
+      `astro-scholar-main/src/styles/home.css` into `src/pages/en/index.astro`
+      or a local landing-page subdirectory.
 - [ ] Investigate `src/pages/en/index.astro` manually and with help from a
       coding agent.
 - [ ] Investigate `src/components/Hero.astro` manually and with help from a
       coding agent.
-- [ ] Investigate `src/styles/home.css` manually and with help from a coding
-      agent.
-- [ ] Migrate the CV route by adapting:
-      `astro-scholar-main/src/pages/about.astro` and
-      `astro-scholar-main/src/styles/about.css` into `/en/cv/`.
+- [ ] Migrate the CV route by merging `astro-scholar-main/src/pages/about.astro`
+      into `src/pages/en/cv.astro`, while merging CV-specific CSS from
+      `astro-scholar-main/src/styles/about.css` into `src/pages/en/cv.astro` or
+      a local CV-page subdirectory.
 - [ ] Investigate `src/pages/en/cv.astro` manually and with help from a coding
       agent.
-- [ ] Investigate `src/styles/about.css` manually and with help from a coding
-      agent.
-- [ ] Migrate the blog index route by adapting:
-      `astro-scholar-main/src/pages/blog/index.astro` and
-      `astro-scholar-main/src/styles/blog.css` into `/en/blog/`.
+- [ ] Migrate the blog index route by merging
+      `astro-scholar-main/src/pages/blog/index.astro` into
+      `src/pages/en/blog/index.astro`, while merging blog-index CSS from
+      `astro-scholar-main/src/styles/blog.css` into
+      `src/pages/en/blog/index.astro` or a local blog-index subdirectory.
 - [ ] Investigate `src/pages/en/blog/index.astro` manually and with help from a
       coding agent.
-- [ ] Investigate `src/styles/blog.css` manually and with help from a coding
-      agent.
-- [ ] Migrate the blog post layout from
-      `astro-scholar-main/src/layouts/BlogPost.astro`.
+- [ ] Migrate the blog post layout by merging
+      `astro-scholar-main/src/layouts/BlogPost.astro` into
+      `src/layouts/BlogPost.astro`.
 - [ ] Investigate `src/layouts/BlogPost.astro` manually and with help from a
       coding agent.
 - [ ] Replace the template sample blog posts with real blog content one file at
