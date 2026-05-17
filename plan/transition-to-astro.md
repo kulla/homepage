@@ -93,13 +93,3 @@ commit stays easy to review and the new codebase remains approachable.
 - [ ] Migrate metadata, favicons, images, and deployment settings for
       `https://kulla.dev/`.
 - [ ] Remove unused template artifacts and verify the build and checks.
-
-## Current Status
-
-- [x] Main plan created.
-- [x] Commit workflow scaffolding implemented in `scripts/commit.sh`.
-- [x] Transition strategy updated to a route-by-route and file-by-file
-      migration.
-- [x] Root route decision made: `/` should redirect to `/en/`.
-- [ ] Architecture and i18n project-structure step not started yet.
-- [ ] Astro migration code not implemented yet.
