@@ -3,12 +3,12 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "astro build",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
     "check:format": "prettier --check .",
     "check:tsc": "tsc --noEmit",
-    "dev": "astro dev",
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "format": "prettier --write .",
-    "preview": "astro preview"
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview"
   },
   "devDependencies": {
     "prettier": "3.8.3",
