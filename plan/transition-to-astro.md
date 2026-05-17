@@ -16,8 +16,8 @@ commit stays easy to review and the new codebase remains approachable.
 
 ## Current Decisions
 
-- Use `astro-scholar-main/` as the source template (copy files from there and
-  then change them).
+- Use `astro-scholar-main/` as the source template, but migrate it progressively
+  route by route and file by file instead of copying everything at once.
 - Final navigation should focus on `Home`, `Blog`, and `CV`.
 - The initial visual direction should start from the template look.
 - `Publications` and `Presentations` should be ommited.
@@ -56,18 +56,41 @@ commit stays easy to review and the new codebase remains approachable.
 ## Ordered Todo List
 
 - [x] Create the commit workflow scaffolding.
-- [ ] Record architecture and i18n decisions in the project structure.
-- [ ] Import the Astro template into the main project with minimal structural changes.
-- [ ] Wire the root project to build and run the Astro site.
-- [ ] Introduce the localized `/<lang>/...` route structure with English-only active routes.
-- [ ] Remove template pages and navigation items that are not part of the target site.
-- [ ] Move the legacy handwritten site into a separate reference location.
-- [ ] Build the English landing page shell at `/en/`.
-- [ ] Build the English CV page shell at `/en/cv/`.
-- [ ] Adapt the blog to the localized structure at `/en/blog/`.
-- [ ] Migrate content progressively from the legacy site into the new pages.
-- [ ] Migrate metadata, assets, and deployment settings for `https://kulla.dev/`.
-- [ ] Remove unused files and verify the build and checks.
+- [ ] Record the target Astro project structure for localized routes and shared
+      files.
+- [ ] Align the root project tooling with Astro by introducing the required root
+      config and scripts.
+- [ ] Migrate the shared shell files from the template:
+      `src/layouts/Layout.astro`, `src/components/Header.astro`,
+      `src/components/Navigation.astro`, `src/components/Menu.astro`,
+      `src/components/ThemeToggle.astro`, `src/components/Footer.astro`,
+      `src/scripts/menu.js`, and `src/styles/global.css`.
+- [ ] Replace template-wide site configuration with project-specific data in
+      `src/constants.ts` and shared assets.
+- [ ] Introduce the English localized route structure under `src/pages/en/`.
+- [ ] Migrate the landing page route by adapting:
+      `astro-scholar-main/src/pages/index.astro`,
+      `astro-scholar-main/src/components/Hero.astro`, and
+      `astro-scholar-main/src/styles/home.css` into `/en/`.
+- [ ] Migrate the CV route by adapting:
+      `astro-scholar-main/src/pages/about.astro` and
+      `astro-scholar-main/src/styles/about.css` into `/en/cv/`.
+- [ ] Migrate the blog index route by adapting:
+      `astro-scholar-main/src/pages/blog/index.astro` and
+      `astro-scholar-main/src/styles/blog.css` into `/en/blog/`.
+- [ ] Migrate the blog post layout from
+      `astro-scholar-main/src/layouts/BlogPost.astro`.
+- [ ] Replace the template sample blog posts with real blog content one file at
+      a time.
+- [ ] Remove template-only routes and data that are outside the target site:
+      `src/pages/publications.astro`, `src/pages/presentations.astro`,
+      `src/data/publications.json`, and presentation-specific public assets.
+- [ ] Move the handwritten site into a separate reference location.
+- [ ] Migrate legacy homepage and CV content into the new Astro routes page by
+      page.
+- [ ] Migrate metadata, favicons, images, and deployment settings for
+      `https://kulla.dev/`.
+- [ ] Remove unused template artifacts and verify the build and checks.
 
 ## Open Questions
 
@@ -78,5 +101,7 @@ commit stays easy to review and the new codebase remains approachable.
 
 - [x] Main plan created.
 - [x] Commit workflow scaffolding implemented in `scripts/commit.sh`.
+- [x] Transition strategy updated to a route-by-route and file-by-file
+      migration.
 - [ ] Architecture and i18n project-structure step not started yet.
 - [ ] Astro migration code not implemented yet.
