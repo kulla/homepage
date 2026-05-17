@@ -39,6 +39,7 @@ commit stays easy to review and the new codebase remains approachable.
 - Commit messages should use conventional commits.
 - The current handwritten site should later be moved to a separate reference
   folder.
+- Old website is under `old-website/`
 
 ## Internationalization
 
