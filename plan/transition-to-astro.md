@@ -66,6 +66,22 @@ commit stays easy to review and the new codebase remains approachable.
       `src/components/Navigation.astro`, `src/components/Menu.astro`,
       `src/components/ThemeToggle.astro`, `src/components/Footer.astro`,
       `src/scripts/menu.js`, and `src/styles/global.css`.
+- [ ] Investigate `src/layouts/Layout.astro` manually and with help from a
+      coding agent.
+- [ ] Investigate `src/components/Header.astro` manually and with help from a
+      coding agent.
+- [ ] Investigate `src/components/Navigation.astro` manually and with help from
+      a coding agent.
+- [ ] Investigate `src/components/Menu.astro` manually and with help from a
+      coding agent.
+- [ ] Investigate `src/components/ThemeToggle.astro` manually and with help
+      from a coding agent.
+- [ ] Investigate `src/components/Footer.astro` manually and with help from a
+      coding agent.
+- [ ] Investigate `src/scripts/menu.js` manually and with help from a coding
+      agent.
+- [ ] Investigate `src/styles/global.css` manually and with help from a coding
+      agent.
 - [ ] Replace template-wide site configuration with project-specific data in
       `src/constants.ts` and shared assets.
 - [ ] Introduce the English localized route structure under `src/pages/en/`.
@@ -74,14 +90,30 @@ commit stays easy to review and the new codebase remains approachable.
       `astro-scholar-main/src/pages/index.astro`,
       `astro-scholar-main/src/components/Hero.astro`, and
       `astro-scholar-main/src/styles/home.css` into `/en/`.
+- [ ] Investigate `src/pages/en/index.astro` manually and with help from a
+      coding agent.
+- [ ] Investigate `src/components/Hero.astro` manually and with help from a
+      coding agent.
+- [ ] Investigate `src/styles/home.css` manually and with help from a coding
+      agent.
 - [ ] Migrate the CV route by adapting:
       `astro-scholar-main/src/pages/about.astro` and
       `astro-scholar-main/src/styles/about.css` into `/en/cv/`.
+- [ ] Investigate `src/pages/en/cv.astro` manually and with help from a coding
+      agent.
+- [ ] Investigate `src/styles/about.css` manually and with help from a coding
+      agent.
 - [ ] Migrate the blog index route by adapting:
       `astro-scholar-main/src/pages/blog/index.astro` and
       `astro-scholar-main/src/styles/blog.css` into `/en/blog/`.
+- [ ] Investigate `src/pages/en/blog/index.astro` manually and with help from a
+      coding agent.
+- [ ] Investigate `src/styles/blog.css` manually and with help from a coding
+      agent.
 - [ ] Migrate the blog post layout from
       `astro-scholar-main/src/layouts/BlogPost.astro`.
+- [ ] Investigate `src/layouts/BlogPost.astro` manually and with help from a
+      coding agent.
 - [ ] Replace the template sample blog posts with real blog content one file at
       a time.
 - [ ] Remove template-only routes and data that are outside the target site:
