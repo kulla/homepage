@@ -2,27 +2,27 @@
 
 set -eu
 
-script_dir=$(dirname "$0")
-repo_root=$(cd "$script_dir/.." && pwd)
-message_file="$repo_root/plan/current_commit_message"
+SCRIPT_DIR=$(dirname "$0")
+REPO_ROOT=$(cd "$SCRIPT_DIR/.." && pwd)
+MESSAGE_FILE="$REPO_ROOT/plan/current_commit_message"
 
-if [ ! -f "$message_file" ]; then
-  printf 'Missing commit message file: %s\n' "$message_file" >&2
+if [ ! -f "$MESSAGE_FILE" ]; then
+  printf 'Missing commit message file: %s\n' "$MESSAGE_FILE" >&2
   exit 1
 fi
 
 printf 'Using predefined commit message from %s:\n\n' "plan/current_commit_message"
-cat "$message_file"
+cat "$MESSAGE_FILE"
 printf '\nUse this message as-is? [Y/n] '
 read -r response
 
 case "$response" in
   '' | [Yy] | [Yy][Ee][Ss])
-    git -C "$repo_root" commit -F "$message_file" "$@"
+    git -C "$REPO_ROOT" commit -F "$MESSAGE_FILE" "$@"
     ;;
   *)
-    git -C "$repo_root" commit -t "$message_file" "$@"
+    git -C "$REPO_ROOT" commit -t "$MESSAGE_FILE" "$@"
     ;;
 esac
 
-rm "$message_file"
+rm "$MESSAGE_FILE"
