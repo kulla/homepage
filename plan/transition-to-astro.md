@@ -125,8 +125,9 @@ tsconfig.json
       `astro-scholar-main/src/components/Footer.astro` into
       `src/components/Footer.astro`, and
       `astro-scholar-main/src/styles/global.css` into `src/styles/global.css`.
-- [ ] Investigate `src/layouts/Layout.astro` manually and with help from a
+- [x] Investigate `src/layouts/Layout.astro` manually and with help from a
       coding agent.
+- [ ] Investigate constants file.
 - [ ] Investigate `src/components/Header.astro` manually and with help from a
       coding agent.
 - [ ] Investigate `src/components/Navigation.astro` manually and with help from
@@ -139,6 +140,7 @@ tsconfig.json
       coding agent.
 - [ ] Investigate `src/styles/global.css` manually and with help from a coding
       agent.
+- [ ] Copy inter font into public directory.
 - [ ] Integrate `astro-scholar-main/src/scripts/menu.js` into the owning Astro
       component files, primarily `src/components/Menu.astro` and
       `src/components/Navigation.astro`, instead of keeping a separate
