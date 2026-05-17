@@ -76,5 +76,5 @@ commit stays easy to review and the new codebase remains approachable.
 ## Current Status
 
 - Main plan created.
-- No step-specific todo files generated yet.
+- Commit workflow scaffolding implemented in `scripts/commit.sh`.
 - No Astro migration code implemented yet.
