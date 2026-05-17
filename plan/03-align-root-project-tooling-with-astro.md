@@ -31,10 +31,11 @@ tooling aligned before shared Astro files and routes are introduced.
   - optional passthrough `astro`
 - keep existing formatting script names unless there is a concrete reason to
   rename them
-- replace Bun-specific TypeScript config inheritance with Astro TypeScript config
+- replace Bun-specific TypeScript config inheritance with Astro TypeScript
+  config
 - make sure CI continues to work with `bun run build`
-- keep output targeting `dist` so existing publish workflow artifact paths remain
-  valid
+- keep output targeting `dist` so existing publish workflow artifact paths
+  remain valid
 
 ## Astro Config Expectations
 

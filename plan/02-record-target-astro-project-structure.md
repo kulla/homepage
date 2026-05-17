@@ -1,9 +1,9 @@
-# Record Target Astro Project Structure For Localized Routes And Shared Files
+# Record Target Astro Project Structure For Shared Routes And Files
 
 ## Goal
 
-Document the target `src/` and root-level Astro project structure before moving any
-template files so the migration has a stable file map.
+Document the target `src/` and root-level Astro project structure before moving
+any template files so the migration has a stable file map.
 
 ## Why This Step Exists
 
@@ -24,13 +24,11 @@ can follow without re-deciding file locations.
 
 - `src/pages/` is the only required Astro source directory and route URLs come
   directly from file paths inside it
-- localized pages live under `src/pages/en/`
-- `/` remains a separate root route that redirects to `/en/`
 - shared shell files live in:
   - `src/layouts/`
   - `src/components/`
   - `src/styles/global.css`
-- blog post pages live under `src/pages/en/blog/`
+- blog post pages live under `src/pages/blog/`
 - shared site data lives in `src/constants.ts`
 - component-specific CSS and JS stay colocated with the owning `.astro` file
 - subdirectories are introduced only when a page or component becomes too large
@@ -60,12 +58,10 @@ src/
     Layout.astro
   pages/
     index.astro
-    en/
+    cv.astro
+    blog/
       index.astro
-      cv.astro
-      blog/
-        index.astro
-        [slug].astro or individual post files later
+      [slug].astro or individual post files later
   styles/
     global.css
   constants.ts
@@ -78,15 +74,11 @@ tsconfig.json
 
 - `src/index.html` is temporary legacy entrypoint content and will be retired as
   Astro routes replace it.
-- The localized route tree should start with English only, but directory layout
-  must leave room for future `/de/` routes.
-- `src/pages/index.astro` exists only to serve the `/` redirect. The actual
-  English landing page lives at `src/pages/en/index.astro`.
 - Files or directories under `src/pages/` can be prefixed with `_` later if a
   colocated helper, test file, or temporary disabled page should stay out of the
   generated route tree.
-- Template-only files for publications and presentations are intentionally out of
-  scope for the target structure.
+- Template-only files for publications and presentations are intentionally out
+  of scope for the target structure.
 - The initial target does not reserve a destination for template-only files such
   as `src/components/SocialIcons.astro`, `src/data/`, `src/scripts/`, or
   `src/styles/publications.css`; any needed behavior should be merged into the

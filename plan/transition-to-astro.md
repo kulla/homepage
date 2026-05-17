@@ -22,7 +22,6 @@ commit stays easy to review and the new codebase remains approachable.
 - The initial visual direction should start from the template look.
 - `Publications` and `Presentations` should be ommited.
 - The CV should live on a dedicated route.
-- `/` should redirect to `/en/`.
 - Component-specific CSS and JS should be colocated with the component or page.
 - Prefer keeping markup, scoped CSS, and processed client-side scripts in the
   same `.astro` file.
@@ -40,11 +39,10 @@ commit stays easy to review and the new codebase remains approachable.
 - The route structure should be prepared for internationalization from the
   beginning.
 - The initial implementation should ship English content only.
-- Localized routes should use `/<lang>/...` paths.
 - The initial active routes should be:
-  - `/en/`
-  - `/en/blog/`
-  - `/en/cv/`
+  - `/`
+  - `/blog/`
+  - `/cv/`
 - German support is planned for a later step.
 
 ## Workflow Rules
@@ -64,12 +62,9 @@ commit stays easy to review and the new codebase remains approachable.
 ## Ordered Todo List
 
 - [x] Create the commit workflow scaffolding.
-- [ ] Record the target Astro project structure for localized routes and shared
-      files.
+- [ ] Record the target Astro project structure for shared routes and files.
 - [ ] Align the root project tooling with Astro by introducing the required root
       config and scripts.
-- [ ] Decide for each migrated file whether it stays as a single `.astro` file
-      or moves into a colocated component or page subdirectory.
 - [ ] Migrate the shared shell files from the template by merging:
       `astro-scholar-main/src/layouts/Layout.astro` into
       `src/layouts/Layout.astro`,
@@ -104,30 +99,29 @@ commit stays easy to review and the new codebase remains approachable.
       `src/scripts/menu.js` file.
 - [ ] Replace template-wide site configuration with project-specific data in
       `src/constants.ts` and shared assets.
-- [ ] Introduce the English localized route structure under `src/pages/en/`.
-- [ ] Add the root route so `/` redirects to `/en/`.
+- [ ] Introduce the initial English route structure directly under `src/pages/`.
 - [ ] Migrate the landing page route by merging
-      `astro-scholar-main/src/pages/index.astro` into `src/pages/en/index.astro`
+      `astro-scholar-main/src/pages/index.astro` into `src/pages/index.astro`
       and `astro-scholar-main/src/components/Hero.astro` into
       `src/components/Hero.astro`, while merging landing-page CSS from
-      `astro-scholar-main/src/styles/home.css` into `src/pages/en/index.astro`
-      or a local landing-page subdirectory.
-- [ ] Investigate `src/pages/en/index.astro` manually and with help from a
-      coding agent.
+      `astro-scholar-main/src/styles/home.css` into `src/pages/index.astro` or a
+      local landing-page subdirectory.
+- [ ] Investigate `src/pages/index.astro` manually and with help from a coding
+      agent.
 - [ ] Investigate `src/components/Hero.astro` manually and with help from a
       coding agent.
 - [ ] Migrate the CV route by merging `astro-scholar-main/src/pages/about.astro`
-      into `src/pages/en/cv.astro`, while merging CV-specific CSS from
-      `astro-scholar-main/src/styles/about.css` into `src/pages/en/cv.astro` or
-      a local CV-page subdirectory.
-- [ ] Investigate `src/pages/en/cv.astro` manually and with help from a coding
+      into `src/pages/cv.astro`, while merging CV-specific CSS from
+      `astro-scholar-main/src/styles/about.css` into `src/pages/cv.astro` or a
+      local CV-page subdirectory.
+- [ ] Investigate `src/pages/cv.astro` manually and with help from a coding
       agent.
 - [ ] Migrate the blog index route by merging
       `astro-scholar-main/src/pages/blog/index.astro` into
-      `src/pages/en/blog/index.astro`, while merging blog-index CSS from
-      `astro-scholar-main/src/styles/blog.css` into
-      `src/pages/en/blog/index.astro` or a local blog-index subdirectory.
-- [ ] Investigate `src/pages/en/blog/index.astro` manually and with help from a
+      `src/pages/blog/index.astro`, while merging blog-index CSS from
+      `astro-scholar-main/src/styles/blog.css` into `src/pages/blog/index.astro`
+      or a local blog-index subdirectory.
+- [ ] Investigate `src/pages/blog/index.astro` manually and with help from a
       coding agent.
 - [ ] Migrate the blog post layout by merging
       `astro-scholar-main/src/layouts/BlogPost.astro` into
