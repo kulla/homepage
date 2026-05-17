@@ -1,0 +1,57 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_DATA } from '../constants';
+
+import '../styles/global.css';
+
+const { pageTitle, description = SITE_DATA.description } = Astro.props;
+const title = pageTitle ? `${SITE_DATA.name} | ${pageTitle}` : SITE_DATA.name;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="color-scheme" content="light dark" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <script is:inline>
+      const theme = (() => {
+        try {
+          const storedTheme = localStorage.getItem('theme');
+
+          if (storedTheme) {
+            return storedTheme;
+          }
+        } catch {
+          // Ignore storage errors and fall back to system preference.
+        }
+
+        return window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light';
+      })();
+
+      document.documentElement.toggleAttribute('data-theme', theme === 'dark');
+
+      try {
+        localStorage.setItem('theme', theme);
+      } catch {
+        // Ignore storage errors.
+      }
+    </script>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

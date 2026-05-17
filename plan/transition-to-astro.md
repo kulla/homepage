@@ -111,7 +111,7 @@ tsconfig.json
 - [x] Record the target Astro project structure for shared routes and files.
 - [x] Align the root project tooling with Astro by introducing the required root
       config and scripts.
-- [ ] Migrate the shared shell files from the template by merging:
+- [x] Migrate the shared shell files from the template by merging:
       `astro-scholar-main/src/layouts/Layout.astro` into
       `src/layouts/Layout.astro`,
       `astro-scholar-main/src/components/Header.astro` into
