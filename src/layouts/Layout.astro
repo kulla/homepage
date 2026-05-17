@@ -26,7 +26,7 @@ const title = pageTitle ? `${SITE_DATA.name} | ${pageTitle}` : SITE_DATA.name;
         try {
           const storedTheme = localStorage.getItem('theme');
 
-          if (storedTheme) {
+          if (storedTheme === "dark" || storedTheme === "light") {
             return storedTheme;
           }
         } catch {
