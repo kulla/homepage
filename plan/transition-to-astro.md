@@ -95,6 +95,10 @@ tsconfig.json
   starts.
 - Update this main plan whenever implementation changes the planned sequence,
   scope, or assumptions.
+- When running the site locally, start the dev server in the background so it
+  keeps serving while you inspect the result.
+- Use `webfetch` against the local URL to verify what the browser-facing page is
+  returning.
 - After any code change, write `plan/current_commit_message` with the commit
   message for the current change.
 - When a commit was prepared with help from a coding agent, include a
