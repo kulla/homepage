@@ -49,6 +49,9 @@ commit stays easy to review and the new codebase remains approachable.
   scope, or assumptions.
 - After any code change, write `plan/current_commit_message` with the commit
   message for the current change.
+- When a commit was prepared with help from a coding agent, include a
+  `Co-authored-by` trailer in `plan/current_commit_message` so the resulting
+  commit clearly records that assistance.
 
 ## Ordered Todo List
 
