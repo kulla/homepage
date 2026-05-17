@@ -11,18 +11,6 @@ if [ ! -f "$MESSAGE_FILE" ]; then
   exit 1
 fi
 
-printf 'Using predefined commit message from %s:\n\n' "plan/current_commit_message"
-cat "$MESSAGE_FILE"
-printf '\nUse this message as-is? [Y/n] '
-read -r response
-
-case "$response" in
-  '' | [Yy] | [Yy][Ee][Ss])
-    git -C "$REPO_ROOT" commit -F "$MESSAGE_FILE" "$@"
-    ;;
-  *)
-    git -C "$REPO_ROOT" commit -t "$MESSAGE_FILE" "$@"
-    ;;
-esac
+git -C "$REPO_ROOT" commit -F "$MESSAGE_FILE" "$@"
 
 rm "$MESSAGE_FILE"
