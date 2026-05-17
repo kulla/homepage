@@ -41,6 +41,41 @@ commit stays easy to review and the new codebase remains approachable.
   folder.
 - Old website is under `old-website/`
 
+## Target Project Structure
+
+```text
+public/
+  favicon.svg
+  robots.txt
+  images/
+src/
+  components/
+    Footer.astro
+    Header.astro
+    Hero.astro
+    Menu.astro
+    Navigation.astro
+    ThemeToggle.astro
+  layouts/
+    BlogPost.astro
+    Layout.astro
+  pages/
+    index.astro
+    cv.astro
+    blog/
+      index.astro
+      [slug].astro or individual post files later
+  styles/
+    global.css
+  constants.ts
+astro.config.mjs
+package.json
+tsconfig.json
+```
+
+`src/pages/` defines the route tree, while shared shell files stay in
+`src/layouts/`, `src/components/`, and `src/styles/global.css`.
+
 ## Internationalization
 
 - The route structure should be prepared for internationalization from the
@@ -69,7 +104,7 @@ commit stays easy to review and the new codebase remains approachable.
 ## Ordered Todo List
 
 - [x] Create the commit workflow scaffolding.
-- [ ] Record the target Astro project structure for shared routes and files.
+- [x] Record the target Astro project structure for shared routes and files.
 - [ ] Align the root project tooling with Astro by introducing the required root
       config and scripts.
 - [ ] Migrate the shared shell files from the template by merging:
