@@ -16,9 +16,14 @@ can follow without re-deciding file locations.
 - `plan/transition-to-astro.md`
 - current root project structure
 - `astro-scholar-main/` template structure
+- current Astro docs:
+  - `https://docs.astro.build/en/basics/project-structure/`
+  - `https://docs.astro.build/en/guides/routing/`
 
 ## Decisions To Record
 
+- `src/pages/` is the only required Astro source directory and route URLs come
+  directly from file paths inside it
 - localized pages live under `src/pages/en/`
 - `/` remains a separate root route that redirects to `/en/`
 - shared shell files live in:
@@ -30,10 +35,18 @@ can follow without re-deciding file locations.
 - component-specific CSS and JS stay colocated with the owning `.astro` file
 - subdirectories are introduced only when a page or component becomes too large
   or needs companion assets
+- root-level Astro project files should include `astro.config.mjs`,
+  `package.json`, and `tsconfig.json`
+- unprocessed assets that should bypass Astro bundling belong in `public/`
 
 ## Target Structure To Record
 
 ```text
+public/
+  favicon.svg
+  robots.txt
+  images/
+  [future static assets copied without processing]
 src/
   components/
     Footer.astro
@@ -52,10 +65,13 @@ src/
       cv.astro
       blog/
         index.astro
-        [slug or individual post files later]
+        [slug].astro or individual post files later
   styles/
     global.css
   constants.ts
+astro.config.mjs
+package.json
+tsconfig.json
 ```
 
 ## Notes To Capture
@@ -64,8 +80,17 @@ src/
   Astro routes replace it.
 - The localized route tree should start with English only, but directory layout
   must leave room for future `/de/` routes.
+- `src/pages/index.astro` exists only to serve the `/` redirect. The actual
+  English landing page lives at `src/pages/en/index.astro`.
+- Files or directories under `src/pages/` can be prefixed with `_` later if a
+  colocated helper, test file, or temporary disabled page should stay out of the
+  generated route tree.
 - Template-only files for publications and presentations are intentionally out of
   scope for the target structure.
+- The initial target does not reserve a destination for template-only files such
+  as `src/components/SocialIcons.astro`, `src/data/`, `src/scripts/`, or
+  `src/styles/publications.css`; any needed behavior should be merged into the
+  kept files instead of copying those directories wholesale.
 - Keep the structure document focused on destination paths, not implementation
   details of each file.
 
