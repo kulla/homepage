@@ -4,7 +4,7 @@
 
 <button
   id="theme-toggle"
-  class="theme-toggle"
+  class="theme-toggle svg-button"
   type="button"
   aria-label="Toggle dark mode"
 >
@@ -61,3 +61,40 @@
     }
   })
 </script>
+
+<style>
+  .theme-toggle {
+    padding: 0.5rem;
+    transition:
+      transform var(--transition-fast),
+      color var(--transition-fast);
+  }
+
+  @media (hover: hover) {
+    .theme-toggle:hover {
+      transform: scale(1.1);
+      color: var(--color-accent);
+    }
+  }
+
+  .theme-toggle:active {
+    transform: scale(1.1);
+    color: var(--color-accent);
+  }
+
+  .sun {
+    display: none;
+  }
+
+  .moon {
+    display: block;
+  }
+
+  :global([data-theme='dark']) .sun {
+    display: block;
+  }
+
+  :global([data-theme='dark']) .moon {
+    display: none;
+  }
+</style>
