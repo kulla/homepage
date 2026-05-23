@@ -134,7 +134,7 @@ tsconfig.json
       a coding agent.
 - [ ] Investigate `src/components/Menu.astro` manually and with help from a
       coding agent.
-- [ ] Investigate `src/components/ThemeToggle.astro` manually and with help from
+- [x] Investigate `src/components/ThemeToggle.astro` manually and with help from
       a coding agent.
 - [ ] Investigate `src/components/Footer.astro` manually and with help from a
       coding agent.
