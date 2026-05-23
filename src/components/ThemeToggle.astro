@@ -4,9 +4,9 @@
 
 <button
   id="theme-toggle"
-  class="theme-toggle svg-button"
+  class="svg-button"
   type="button"
-  aria-label="Toggle dark mode"
+  aria-label="Toggle light/dark mode"
 >
   <svg
     class="sun"
@@ -63,7 +63,7 @@
 </script>
 
 <style>
-  .theme-toggle {
+  #theme-toggle {
     padding: 0.5rem;
     transition:
       transform var(--transition-fast),
@@ -71,13 +71,13 @@
   }
 
   @media (hover: hover) {
-    .theme-toggle:hover {
+    #theme-toggle:hover {
       transform: scale(1.1);
       color: var(--color-accent);
     }
   }
 
-  .theme-toggle:active {
+  #theme-toggle:active {
     transform: scale(1.1);
     color: var(--color-accent);
   }
