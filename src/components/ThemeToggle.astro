@@ -52,7 +52,7 @@
     const isDark = element.getAttribute('data-theme') === 'dark'
     const nextTheme = isDark ? 'light' : 'dark'
 
-    element.toggleAttribute('data-theme', nextTheme === 'dark')
+    element.setAttribute('data-theme', nextTheme)
 
     try {
       localStorage.setItem('theme', nextTheme)

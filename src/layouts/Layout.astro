@@ -36,7 +36,7 @@ const { title, description } = Astro.props
           : 'light'
       })()
 
-      document.documentElement.toggleAttribute('data-theme', theme === 'dark')
+      document.documentElement.setAttribute('data-theme', theme)
 
       try {
         localStorage.setItem('theme', theme)
