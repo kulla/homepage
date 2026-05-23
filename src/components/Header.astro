@@ -6,13 +6,9 @@ import ThemeToggle from './ThemeToggle.astro';
 
 <header>
   <nav aria-label="Primary">
-    <div class="nav-left">
-      <Menu />
-      <Navigation />
-    </div>
-    <div class="nav-right">
-      <ThemeToggle />
-    </div>
+    <Menu />
+    <Navigation />
+    <ThemeToggle />
   </nav>
 </header>
 
@@ -32,9 +28,7 @@ import ThemeToggle from './ThemeToggle.astro';
     align-items: center;
   }
 
-  .nav-left,
-  .nav-right {
-    display: flex;
-    align-items: center;
+  nav > :last-child {
+    margin-left: auto;
   }
 </style>
