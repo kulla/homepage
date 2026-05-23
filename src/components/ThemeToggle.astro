@@ -1,7 +1,13 @@
 ---
+
 ---
 
-<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+<button
+  id="theme-toggle"
+  class="theme-toggle"
+  type="button"
+  aria-label="Toggle dark mode"
+>
   <svg
     class="sun"
     viewBox="0 0 24 24"
@@ -39,19 +45,19 @@
 </button>
 
 <script>
-  const toggle = document.getElementById('theme-toggle');
+  const toggle = document.getElementById('theme-toggle')
 
   toggle?.addEventListener('click', () => {
-    const element = document.documentElement;
-    const isDark = element.getAttribute('data-theme') === 'dark';
-    const nextTheme = isDark ? 'light' : 'dark';
+    const element = document.documentElement
+    const isDark = element.getAttribute('data-theme') === 'dark'
+    const nextTheme = isDark ? 'light' : 'dark'
 
-    element.toggleAttribute('data-theme', nextTheme === 'dark');
+    element.toggleAttribute('data-theme', nextTheme === 'dark')
 
     try {
-      localStorage.setItem('theme', nextTheme);
+      localStorage.setItem('theme', nextTheme)
     } catch {
       // Ignore storage errors.
     }
-  });
+  })
 </script>

@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <button
@@ -25,35 +26,39 @@
 </button>
 
 <script>
-  const toggle = document.querySelector('.menu-toggle');
-  const closeBtn = document.querySelector('.menu-close');
-  const nav = document.querySelector('.navigation');
+  const toggle = document.querySelector('.menu-toggle')
+  const closeBtn = document.querySelector('.menu-close')
+  const nav = document.querySelector('.navigation')
 
-  const isElement = (value) => value instanceof Element;
+  const isElement = (value) => value instanceof Element
 
-  const closeMenu = () => toggle?.setAttribute('aria-expanded', 'false');
+  const closeMenu = () => toggle?.setAttribute('aria-expanded', 'false')
 
   toggle?.addEventListener('click', () => {
-    const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!isExpanded));
-  });
+    const isExpanded = toggle.getAttribute('aria-expanded') === 'true'
+    toggle.setAttribute('aria-expanded', String(!isExpanded))
+  })
 
-  closeBtn?.addEventListener('click', closeMenu);
+  closeBtn?.addEventListener('click', closeMenu)
 
   nav?.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', closeMenu);
-  });
+    link.addEventListener('click', closeMenu)
+  })
 
   document.addEventListener('click', (event) => {
     if (!isElement(event.target)) {
-      return;
+      return
     }
 
-    const isClickInsideMenu = event.target.closest('.navigation');
-    const isClickOnToggle = event.target.closest('.menu-toggle');
+    const isClickInsideMenu = event.target.closest('.navigation')
+    const isClickOnToggle = event.target.closest('.menu-toggle')
 
-    if (!isClickInsideMenu && !isClickOnToggle && toggle?.getAttribute('aria-expanded') === 'true') {
-      closeMenu();
+    if (
+      !isClickInsideMenu &&
+      !isClickOnToggle &&
+      toggle?.getAttribute('aria-expanded') === 'true'
+    ) {
+      closeMenu()
     }
-  });
+  })
 </script>

@@ -1,10 +1,10 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
 
-import '../styles/global.css';
+import '../styles/global.css'
 
-const { title, description } = Astro.props;
+const { title, description } = Astro.props
 ---
 
 <!doctype html>
@@ -22,10 +22,10 @@ const { title, description } = Astro.props;
     <script is:inline>
       const theme = (() => {
         try {
-          const storedTheme = localStorage.getItem('theme');
+          const storedTheme = localStorage.getItem('theme')
 
-          if (storedTheme === "dark" || storedTheme === "light") {
-            return storedTheme;
+          if (storedTheme === 'dark' || storedTheme === 'light') {
+            return storedTheme
           }
         } catch {
           // Ignore storage errors and fall back to system preference.
@@ -33,13 +33,13 @@ const { title, description } = Astro.props;
 
         return window.matchMedia('(prefers-color-scheme: dark)').matches
           ? 'dark'
-          : 'light';
-      })();
+          : 'light'
+      })()
 
-      document.documentElement.toggleAttribute('data-theme', theme === 'dark');
+      document.documentElement.toggleAttribute('data-theme', theme === 'dark')
 
       try {
-        localStorage.setItem('theme', theme);
+        localStorage.setItem('theme', theme)
       } catch {
         // Ignore storage errors.
       }
