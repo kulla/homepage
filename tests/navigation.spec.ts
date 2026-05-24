@@ -20,18 +20,18 @@ test.describe('Navigation', () => {
     const menu = page.locator('#main-menu')
 
     await expect(burgerMenu).toBeVisible()
-    await expect(menu).not.toHaveCSS('left', '0px')
+    await expect(menu).toHaveAttribute('data-open', 'false')
 
     await burgerMenu.click()
 
     await expect(burgerMenu).toHaveAttribute('aria-expanded', 'true')
-    await expect(menu).toHaveCSS('left', '0px')
+    await expect(menu).toHaveAttribute('data-open', 'true')
     await expect(closeMenu).toBeVisible()
     await expect(page.getByRole('link', { name: 'Home' })).toBeVisible()
 
     await closeMenu.click()
 
     await expect(burgerMenu).toHaveAttribute('aria-expanded', 'false')
-    await expect(menu).not.toHaveCSS('left', '0px')
+    await expect(menu).toHaveAttribute('data-open', 'false')
   })
 })
