@@ -1,7 +1,18 @@
-## Project Overview
+# AGENTS
 
-This is a personal homepage built with handwritten HTML and CSS which currently
-serves a CV for a fullstack software developer. The site content lives in
-`src/`, while build and configuration files are at the repository root. The
-project uses Bun as the runtime and build tool, with TypeScript support and
-Prettier for formatting.
+This is an Astro project.
+
+## Most important source paths
+
+- `src/layouts/` - app shell layouts
+- `src/components/` - shared UI components
+- `src/pages/` - route files
+- `src/styles/global.css` - global tokens, reset, and layout primitives
+- `plan/transition-to-astro.md` - migration plan and workflow rules
+
+## Working rule after each step
+
+Run:
+
+- `bun run check`
+- `bun run test`

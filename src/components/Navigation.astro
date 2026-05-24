@@ -1,0 +1,238 @@
+---
+
+---
+
+<button
+  id="burger-menu"
+  class="svg-button"
+  type="button"
+  aria-expanded="false"
+  aria-controls="main-menu"
+  aria-label="Open menu"
+>
+  <svg
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    stroke="currentColor"
+    stroke-width="2"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="6" x2="21" y2="6"></line>
+    <line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</button>
+
+<nav id="main-menu" data-open="false" aria-label="Main menu">
+  <button
+    id="menu-close"
+    class="svg-button"
+    type="button"
+    aria-label="Close menu"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      width="24"
+      height="24"
+      stroke="currentColor"
+      stroke-width="2"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/cv">CV</a></li>
+  </ul>
+</nav>
+
+<script>
+  const toggle = document.getElementById('burger-menu')
+  const closeBtn = document.getElementById('menu-close')
+  const nav = document.getElementById('main-menu')
+
+  const isElement = (value) => value instanceof Element
+
+  const setMenu = (isOpen) => {
+    toggle?.setAttribute('aria-expanded', String(isOpen))
+    nav?.setAttribute('data-open', String(isOpen))
+    document.body.classList.toggle('menu-open', isOpen)
+  }
+
+  toggle?.addEventListener('click', () => {
+    const isExpanded = toggle.getAttribute('aria-expanded') === 'true'
+    setMenu(!isExpanded)
+  })
+
+  closeBtn?.addEventListener('click', () => setMenu(false))
+
+  nav?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenu(false))
+  })
+
+  document.addEventListener('click', (event) => {
+    if (!isElement(event.target)) {
+      return
+    }
+
+    const isClickInsideMenu = event.target.closest('#main-menu')
+    const isClickOnToggle = event.target.closest('#burger-menu')
+
+    if (
+      !isClickInsideMenu &&
+      !isClickOnToggle &&
+      toggle?.getAttribute('aria-expanded') === 'true'
+    ) {
+      setMenu(false)
+    }
+  })
+</script>
+
+<style>
+  #burger-menu {
+    padding: 1rem;
+  }
+
+  #menu-close {
+    position: absolute;
+    padding: 1rem;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    transition: transform var(--transition-fast);
+  }
+
+  #main-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    height: 100dvh;
+    background-color: var(--color-bg);
+    z-index: 999;
+    transition: transform var(--transition-standard);
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #main-menu[data-open='true'] {
+    transform: translateX(0);
+  }
+
+  :global(body.menu-open)::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 998;
+  }
+
+  @media (hover: hover) {
+    #menu-close:hover {
+      transform: rotate(90deg);
+    }
+  }
+
+  #menu-close:active {
+    transform: rotate(90deg);
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links a {
+    display: block;
+    color: var(--color-primary);
+    text-decoration: none;
+    padding: 1.25rem 2rem;
+    font-size: 1.1rem;
+    transition: all var(--transition-fast);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  @media (hover: hover) {
+    .nav-links a:hover {
+      background-color: rgba(0, 0, 0, 0.03);
+      padding-left: 2.5rem;
+      color: var(--color-accent);
+    }
+  }
+
+  .nav-links a:active {
+    background-color: rgba(0, 0, 0, 0.03);
+    padding-left: 2.5rem;
+    color: var(--color-accent);
+  }
+
+  @media screen and (min-width: 636px) {
+    #burger-menu {
+      display: none;
+    }
+
+    #menu-close {
+      display: none;
+    }
+
+    :global(body.menu-open)::before {
+      display: none;
+    }
+
+    #main-menu {
+      position: static;
+      width: auto;
+      max-width: none;
+      height: auto;
+      background: none;
+      box-shadow: none;
+      padding-top: 0;
+      display: block;
+      z-index: auto;
+      transform: none;
+    }
+
+    .nav-links {
+      flex-direction: row;
+      background: none;
+    }
+
+    .nav-links a {
+      color: var(--color-primary);
+      padding: 0.5rem 1rem;
+      border-bottom: none;
+      font-size: 1rem;
+    }
+
+    @media (hover: hover) {
+      .nav-links a:hover {
+        background: none;
+        padding-left: 1rem;
+        color: var(--color-accent);
+      }
+    }
+
+    .nav-links a:active {
+      background: none;
+      padding-left: 1rem;
+      color: var(--color-accent);
+    }
+  }
+</style>

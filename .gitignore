@@ -1,9 +1,16 @@
+.astro/
+
+# Workflow files
+plan/current_commit_message
+
 # dependencies (bun install)
 node_modules
 
 # output
 out
 dist
+playwright-report
+test-results
 *.tgz
 
 # code coverage
