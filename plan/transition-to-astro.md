@@ -128,11 +128,11 @@ tsconfig.json
 - [x] Investigate `src/layouts/Layout.astro` manually and with help from a
       coding agent.
 - [x] Investigate constants file.
-- [ ] Investigate `src/components/Header.astro` manually and with help from a
+- [x] Investigate `src/components/Header.astro` manually and with help from a
       coding agent.
-- [ ] Investigate `src/components/Navigation.astro` manually and with help from
+- [x] Investigate `src/components/Navigation.astro` manually and with help from
       a coding agent.
-- [ ] Investigate `src/components/Menu.astro` manually and with help from a
+- [x] Investigate `src/components/Menu.astro` manually and with help from a
       coding agent.
 - [x] Investigate `src/components/ThemeToggle.astro` manually and with help from
       a coding agent.
