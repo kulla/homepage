@@ -3,27 +3,21 @@ interface Props {
   size?: number
   gap?: string
   class?: string
-  twitter?: string
-  x?: string
-  bluesky?: string
-  linkedin?: string
-  github?: string
-  scholar?: string
-  email?: string
 }
 
-const {
-  size = 24,
-  gap = '1.5rem',
-  class: className,
-  twitter,
-  x,
-  bluesky,
-  linkedin,
-  github,
-  scholar,
-  email,
-} = Astro.props as Props
+const SOCIAL = {
+  twitter: undefined,
+  x: undefined,
+  bluesky: undefined,
+  email: 'hello@kulla.me',
+  linkedin: 'stephan-kulla',
+  github: 'kulla',
+  scholar: undefined,
+}
+
+const { size = 24, gap = '1.5rem', class: className } = Astro.props as Props
+
+const { twitter, x, bluesky, linkedin, github, scholar, email } = SOCIAL
 ---
 
 <div class:list={['social-icons', className]} style={{ gap }}>
