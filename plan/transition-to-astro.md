@@ -136,18 +136,17 @@ tsconfig.json
       coding agent.
 - [x] Investigate `src/components/ThemeToggle.astro` manually and with help from
       a coding agent.
-- [ ] Investigate `src/components/Footer.astro` manually and with help from a
+- [x] Investigate `src/components/Footer.astro` manually and with help from a
       coding agent.
-- [ ] Investigate `src/styles/global.css` manually and with help from a coding
+- [x] Investigate `src/styles/global.css` manually and with help from a coding
       agent.
 - [x] Copy inter font into public directory.
-- [ ] Integrate `astro-scholar-main/src/scripts/menu.js` into the owning Astro
+- [x] Integrate `astro-scholar-main/src/scripts/menu.js` into the owning Astro
       component files, primarily `src/components/Menu.astro` and
       `src/components/Navigation.astro`, instead of keeping a separate
       `src/scripts/menu.js` file.
-- [ ] Replace template-wide site configuration with project-specific data in
+- [x] Replace template-wide site configuration with project-specific data in
       `src/constants.ts` and shared assets.
-- [ ] Introduce the initial English route structure directly under `src/pages/`.
 - [ ] Migrate the landing page route by merging
       `astro-scholar-main/src/pages/index.astro` into `src/pages/index.astro`
       and `astro-scholar-main/src/components/Hero.astro` into
