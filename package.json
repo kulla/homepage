@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "check": "bun run check:format && bun run check:tsc",
     "check:format": "prettier --check .",
     "check:tsc": "tsc --noEmit",
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
