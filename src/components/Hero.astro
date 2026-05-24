@@ -12,7 +12,7 @@ const { name, tagline } = Astro.props
       <Image src={portraitImage} alt={name} class="portrait" />
     </div>
     <div class="hero-text">
-      <p class="bubble"><span class="bold">Hello there,</span> I'm</p>
+      <p class="bubble"><strong>Hello there,</strong> I'm</p>
       <h1><span class="delete">Stephan</span> {name}</h1>
       <p class="tagline">{tagline}</p>
       <SocialIcons size={40} gap="1.5rem" />
@@ -77,10 +77,6 @@ const { name, tagline } = Astro.props
   .hero-text h1 :global(.delete) {
     text-decoration: line-through;
     color: color-mix(in oklab, var(--color-text) 30%, var(--color-bg-alt));
-  }
-
-  .bold {
-    font-weight: bold;
   }
 
   .bubble {
