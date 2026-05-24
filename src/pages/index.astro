@@ -1,5 +1,33 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import Hero from '../components/Hero.astro'
+
+const HOME = {
+  name: 'Kulla',
+  tagline: 'Senior Software Developer and Educator',
+  twitter: undefined,
+  x: undefined,
+  bluesky: undefined,
+  email: 'hello@kulla.me',
+  linkedin: 'stephan-kulla',
+  github: 'kulla',
+  scholar: undefined,
+}
 ---
 
-<Layout pageTitle="Home" />
+<Layout
+  title="Kulla | Senior Software Developer and Educator"
+  description="Senior software developer and educator focused on open digital learning and high-impact software."
+>
+  <Hero
+    name={HOME.name}
+    tagline={HOME.tagline}
+    twitter={HOME.twitter}
+    x={HOME.x}
+    bluesky={HOME.bluesky}
+    email={HOME.email}
+    linkedin={HOME.linkedin}
+    github={HOME.github}
+    scholar={HOME.scholar}
+  />
+</Layout>

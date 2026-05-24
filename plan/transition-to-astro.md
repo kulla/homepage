@@ -147,7 +147,7 @@ tsconfig.json
       `src/scripts/menu.js` file.
 - [x] Replace template-wide site configuration with project-specific data in
       `src/constants.ts` and shared assets.
-- [ ] Migrate the landing page route by merging
+- [x] Migrate the landing page route by merging
       `astro-scholar-main/src/pages/index.astro` into `src/pages/index.astro`
       and `astro-scholar-main/src/components/Hero.astro` into
       `src/components/Hero.astro`, while merging landing-page CSS from
