@@ -91,27 +91,6 @@ main {
   }
 }
 
-.footer-container {
-  min-height: var(--footer-height);
-  background-color: var(--color-bg-alt);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-  border-top: 1px solid var(--color-border);
-}
-
-.footer-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: var(--max-width);
-  padding: 0 2rem;
-}
-
 .svg-button {
   background: none;
   border: none;
