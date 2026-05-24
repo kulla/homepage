@@ -1,18 +1,24 @@
+---
+import SocialIcons from './SocialIcons.astro'
+---
+
 <footer>
-  <p>&copy; 2026 Kulla</p>
+  <div class="copyright">&copy; 2026 Kulla</div>
+  <SocialIcons size={18} gap="1.0rem" />
 </footer>
 
 <style>
   footer {
-    min-height: var(--footer-height);
+    height: var(--footer-height);
     background-color: var(--color-bg-alt);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     width: 100%;
     font-size: 0.9rem;
     color: var(--color-text-muted);
     border-top: 1px solid var(--color-border);
-    padding: 0 2rem;
+    padding: 0.5rem 2rem;
   }
 </style>
