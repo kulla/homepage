@@ -8,9 +8,11 @@
     "check:tsc": "tsc --noEmit",
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "format": "prettier --write .",
-    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview"
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "test": "playwright test"
   },
   "devDependencies": {
+    "@playwright/test": "^1.54.0",
     "prettier": "3.8.3",
     "prettier-plugin-astro": "0.14.1",
     "typescript": "6.0.3"
